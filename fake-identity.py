@@ -160,16 +160,107 @@ ziodiac_sign = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 
     'Capricorn', 'Aquarius', 'Pisces'
 ]
 gender = ['Male', 'Female']
-street_names = ['Main', 'High', 'Pearl', 'Maple', 'Park', 'Oak', 'Pine', 'Cedar', 'Elm', 'Washington', 'Lake', 'Hill']
-fake_cities = ['Metropolis', 'Eerie', "King's Landing", 'Sunnydale', 'Bedrock', 'South Park', 'Atlantis', 'Mordor', 'Olympus', 'Dawnstar', 'Balmora', 'Gotham', 'Springfield', 'Quahog', 'Smalltown', 'Epicburg', 'Pythonville', 'Faketown', 'Westworld', 'Thundera', 'Vice City', 'Blackwater', 'Oldtown', 'Valyria', 'Winterfell', 'Lakeview']
+street_names = [
+    'Main Street', 'First Street', 'Second Street', 'Third Street', 'Elm Street', 'Oak Street', 'Pine Street',
+    'Maple Street', 'Washington Street', 'Broadway', 'High Street', 'Park Avenue', 'King Street', 'Church Street',
+    'Cedar Street', 'River Road', 'Lake Road', 'Sunset Boulevard', 'North Avenue', 'South Avenue', 'East Road',
+    'West Road', 'Hill Street', 'Monroe Street', 'Jefferson Street', 'Franklin Street', 'Adams Street', 'Lincoln Street',
+    'State Street', 'Victory Road', 'Rose Street', 'Baker Street', 'Pleasant Street', 'Green Street', 'Spring Street',
+    'Woods Road', 'Sunnyvale Road', 'Cottonwood Drive', 'Independence Avenue', 'Heritage Way', 'Hilltop Drive',
+    'Ridge Road', 'Country Road', 'Sunshine Street', 'Silver Avenue', 'Golden Drive', 'Main Avenue', 'Kingston Road',
+    'Broadway Avenue', 'Peachtree Street', 'Lakeside Drive', 'Shady Lane', 'Oakwood Drive', 'Rainbow Boulevard',
+    'Cherry Blossom Drive', 'Cypress Street', 'Sunset Drive', 'Sierra Avenue', 'Mountain View Road', 'Water Street',
+    'Pinehurst Drive', 'Clearview Street', 'Bluebell Road', 'Hawthorne Avenue', 'Riverfront Road', 'Wellington Drive',
+    'Summit Street', 'Miller Road', 'Maple Avenue', 'Redwood Street', 'Tanglewood Drive', 'Linden Street', 'Ash Street',
+    'Briargate Road', 'New Hope Road', 'Parkwood Drive', 'Thornhill Street', 'Windsor Road', 'Chestnut Street',
+    'Hickory Lane', 'Crescent Avenue', 'Valley Road', 'Sunrise Boulevard', 'Silver Oak Drive', 'Rolling Hills Road',
+    'Riverstone Lane', 'Belfast Road', 'Bristol Drive', 'Cottonwood Avenue', 'Chestnut Avenue', 'Glenwood Road',
+    'Silver Creek Drive', 'Eagle Street', 'Springdale Road', 'Copperstone Drive', 'Mountain View Drive', 'Beach Street'
+]
+cities = [
+    'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 
+    'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'San Francisco',
+    'Charlotte', 'Indianapolis', 'Seattle', 'Denver', 'Washington D.C.', 'Boston', 'El Paso', 
+    'Detroit', 'Nashville', 'Portland', 'Memphis', 'Oklahoma City', 'Las Vegas', 'Louisville', 
+    'Baltimore', 'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Mesa', 'Sacramento', 'Kansas City', 
+    'Long Beach', 'Atlanta', 'Colorado Springs', 'Raleigh', 'Miami', 'Omaha', 'Oakland', 'Minneapolis',
+    'Tulsa', 'Wichita', 'Arlington', 'New Orleans', 'Cleveland', 'Bakersfield', 'Tampa', 'Henderson', 
+    'Aurora', 'Honolulu', 'Anaheim', 'Santa Ana', 'Riverside', 'Corpus Christi', 'Lexington', 'St. Louis', 
+    'Stockton', 'Pittsburgh', 'St. Paul', 'Cincinnati', 'Anchorage', 'Greensboro', 'Plano', 'Newark', 
+    'Lincoln', 'Orlando', 'Irvine', 'Toledo', 'Jersey City', 'Chula Vista', 'Durham', 'Fort Wayne', 
+    'Buffalo', 'Madison', 'Lubbock', 'Chandler', 'Glendale', 'Reno', 'Norfolk', 'Winston-Salem', 'Gilbert', 
+    'Hialeah', 'Arlington', 'Huntington Beach', 'Montgomery', 'Boise', 'Richmond', 'Des Moines', 
+    'Spokane', 'Tacoma', 'San Bernardino', 'Modesto', 'Fontana', 'Santa Clarita', 'Birmingham', 
+    'Oxnard', 'Fayetteville', 'Moreno Valley', 'Shreveport', 'Aurora', 'Yonkers', 'Columbia', 'Lakewood',
+    'Cape Coral', 'Peoria', 'Jackson', 'Naperville', 'Escondido', 'Fullerton', 'McKinney', 'Killeen', 
+    'Bellevue', 'Rockford', 'McAllen', 'Costa Mesa', 'Inglewood', 'Manchester', 'Waterbury', 'Charleston',
+    'West Valley City', 'Lewisville', 'Huntington', 'Gresham', 'Fargo', 'Glendale', 'South Bend', 'Edmond',
+    'Columbus', 'Round Rock', 'Nampa', 'Shreveport', 'Lafayette', 'Baton Rouge', 'Tallahassee', 
+    'Tempe', 'Chattanooga', 'Syracuse', 'Albany', 'Denton', 'Allentown', 'Lansing', 'Evansville', 'Toledo', 
+    'Pueblo', 'Chico', 'Bend', 'Springfield', 'Cedar Rapids', 'Tallahassee', 'Lincoln', 'Overland Park'
+]
 states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
-#car = ['test']
+car = ['Toyota Corolla', 'Honda Civic', 'Ford F-150', 'Chevrolet Silverado', 'Ram 1500', 'Honda Accord', 
+    'Toyota Camry', 'Nissan Altima', 'Ford Mustang', 'Chevrolet Equinox', 'Jeep Grand Cherokee', 'Tesla Model 3', 
+    'BMW 3 Series', 'Audi A4', 'Mercedes-Benz C-Class', 'Volkswagen Jetta', 'Hyundai Elantra', 'Chevrolet Malibu',
+    'Nissan Rogue', 'Subaru Outback', 'Kia Sorento', 'Mazda CX-5', 'Chrysler Pacifica', 'Honda CR-V', 'Toyota RAV4', 
+    'Ford Escape', 'Chevrolet Traverse', 'BMW X5', 'Jeep Wrangler', 'Honda Pilot', 'Ram 2500', 'Chevrolet Tahoe', 
+    'Toyota Tacoma', 'Nissan Frontier', 'GMC Sierra 1500', 'Ford Explorer', 'Hyundai Tucson', 'Tesla Model X', 
+    'Ford Expedition', 'Lincoln Navigator', 'Kia Telluride', 'Subaru Forester', 'Mazda 3', 'Chevrolet Colorado', 
+    'BMW X3', 'Toyota Highlander', 'Ford Ranger', 'Audi Q5', 'Honda Odyssey', 'Ford Focus', 'Chevrolet Spark', 
+    'Toyota 4Runner', 'Honda Fit', 'Hyundai Santa Fe', 'Mazda MX-5 Miata', 'Nissan Sentra', 'Chrysler 300', 
+    'Buick Enclave', 'Ford Fusion', 'GMC Terrain', 'BMW 5 Series', 'Ford Fusion Hybrid', 'Toyota Sienna', 'Nissan Murano',
+    'Chevrolet Impala', 'Dodge Charger', 'Mazda CX-9', 'Chevrolet Suburban', 'Honda Ridgeline', 'Ford Bronco', 
+    'Toyota Prius', 'Honda Insight', 'Chevrolet Bolt EV', 'Kia Forte', 'Toyota Land Cruiser', 'GMC Yukon', 
+    'Chrysler 200', 'Toyota Sequoia', 'Ford Mustang Mach-E', 'Tesla Model S', 'Nissan Leaf', 'Jeep Cherokee', 
+    'Hyundai Ioniq', 'Rivian R1T', 'Ford F-250 Super Duty', 'Chevrolet Bolt', 'Toyota 86', 'Nissan Juke', 
+    'Jeep Gladiator', 'Chrysler Voyager', 'Hyundai Kona', 'Subaru Crosstrek', 'GMC Canyon', 'Honda HR-V', 
+    'Chevrolet Sonic', 'Nissan Titan', 'Ram 3500', 'BMW Z4', 'Toyota Avalon', 'Tesla Model Y', 'Kia Niro', 
+    'Chevrolet Traverse', 'Toyota Venza', 'Ford F-350 Super Duty', 'Dodge Durango', 'Mazda 6', 'Hyundai Veloster', 
+    'BMW 7 Series', 'Toyota Mirai', 'Cadillac Escalade', 'Chevrolet Corvette', 'Lexus RX', 'Acura MDX', 
+    'Lexus ES', 'Audi Q7', 'BMW X7', 'Jaguar F-Pace', 'Lexus GX', 'Subaru Legacy', 'Ford F-450 Super Duty',
+    'Ram 1500 Classic', 'Chevrolet Malibu Hybrid', 'Ford Mustang GT', 'Toyota Supra', 'Chevrolet Camaro', 
+    'Honda Civic Type R', 'Tesla Roadster', 'Dodge Challenger', 'Subaru WRX', 'Ford F-450', 'Nissan Altima Hybrid',
+    'Toyota Yaris', 'Honda CR-V Hybrid', 'Chevrolet Silverado HD', 'Ford F-150 Raptor', 'Toyota Corolla Hatchback', 
+    'Honda Insight Hybrid', 'Hyundai Palisade', 'Chevrolet Traverse High Country', 'Ford F-250', 'Honda Passport', 
+    'Toyota Tundra', 'Kia Stinger', 'Hyundai Ioniq Electric', 'Mazda CX-30', 'Chrysler 300C', 'Nissan Titan XD',
+    'Ford Expedition Max', 'Dodge Ram ProMaster', 'Chevrolet Express', 'Chevrolet Silverado 2500HD', 'Toyota Land Cruiser Prado',
+    'Ford F-350', 'GMC Sierra HD', 'Chevrolet Colorado ZR2', 'Nissan Rogue Sport', 'Mazda CX-50', 'Ram 3500 Limited',
+    'Toyota Venza Hybrid', 'Jeep Wagoneer', 'Dodge Grand Caravan', 'Chevrolet Spark EV', 'Chevrolet Volt', 'Ford Transit',
+    'Honda Civic Sedan', 'Honda Civic Hatchback', 'BMW i3', 'Mercedes-Benz E-Class', 'Ford Focus ST', 'Chevrolet Malibu RS', 
+    'Hyundai Genesis', 'Chevrolet Traverse RS', 'Honda Civic Si', 'Ram ProMaster City', 'Chrysler 300S', 'Tesla Model S Plaid',
+    'Toyota Camry Hybrid', 'Nissan 370Z', 'Chevrolet Camaro ZL1', 'Ford Bronco Sport', 'Audi S4', 'Volkswagen Passat', 
+    'Toyota C-HR', 'Lexus LS', 'Ford F-150 Lightning', 'Mazda 2', 'Kia K900', 'Hyundai Sonata Hybrid', 'Jeep Renegade', 
+    'Toyota Sequoia TRD Pro', 'Dodge Journey', 'Buick Encore', 'Ford Mustang Shelby GT500', 'Chevrolet Colorado WT',
+    'Chevrolet Silverado Z71', 'Mazda 5', 'Nissan Versa', 'Hyundai Sonata', 'Lexus RX 350', 'Nissan Leaf SV', 
+    'BMW X1', 'Dodge Durango SRT', 'Subaru Ascent', 'Honda Civic LX', 'Chevrolet Blazer', 'Ford Transit Connect', 
+    'Toyota Tacoma TRD Off-Road', 'Ram 2500 Power Wagon', 'Tesla Model X Performance', 'Kia Soul EV', 'Lexus GX 460',
+    'Chevrolet Malibu Premier', 'Ford Edge ST', 'Toyota Sienna Hybrid', 'Buick Envision', 'Jeep Compass', 'Toyota Prius Prime',
+    'Hyundai Santa Fe XL', 'Ford Focus Electric', 'Cadillac XT5', 'Chevrolet Silverado 3500HD', 'Tesla Model 3 Long Range',
+    'Honda Clarity', 'BMW i4', 'Mazda MX-30', 'Nissan Maxima', 'Ford Fusion Energi', 'Toyota Highlander Hybrid', 
+    'Hyundai Ioniq Hybrid', 'GMC Terrain Denali', 'Nissan Leaf Plus', 'Chevrolet Bolt EUV', 'Audi Q3', 'Subaru Impreza',
+    'BMW 2 Series', 'Honda HR-V Sport', 'Ford Escape Hybrid', 'Hyundai Kona Electric', 'Kia Sorento Hybrid', 
+    'Ram 1500 Laramie', 'Chevrolet Traverse Premier', 'Toyota Avalon Hybrid', 'Mazda CX-3', 'Lexus UX 250h', 
+    'Subaru Outback Wilderness', 'Ford F-150 Platinum', 'Chevrolet Trailblazer', 'Dodge Charger SRT', 'Chevrolet Traverse RS',
+    'Hyundai Tucson Hybrid', 'Jeep Cherokee Trailhawk', 'Tesla Model Y Performance', 'Nissan Murano Platinum', 
+    'Cadillac Escalade ESV', 'Honda Accord Hybrid', 'Buick Cascada', 'Ford Mustang Mach-E GT', 'Toyota Prius V', 
+    'Chevrolet Silverado Custom', 'Hyundai Elantra N', 'Ram 3500 Laramie', 'Volkswagen Golf R', 'Honda Civic Touring',
+    'GMC Canyon Denali', 'Jeep Renegade Trailhawk', 'Kia Niro EV', 'Chrysler 300 Limited', 'Ford Edge Titanium', 
+    'BMW X6', 'Chevrolet Tahoe Z71', 'Nissan Pathfinder', 'Toyota Land Cruiser 70', 'Honda Accord Sport', 'Hyundai Ioniq 5',
+    'Ram 2500 Tradesman', 'Ford F-150 Tremor', 'Chevrolet Malibu Hybrid', 'Mazda CX-7', 'Kia Sportage', 'Chrysler Pacifica Hybrid',
+    'Nissan Juke Nismo', 'Chevrolet Bolt', 'Subaru Crosstrek Hybrid', 'Audi Q8', 'GMC Sierra 2500HD', 'Jeep Cherokee Latitude',
+    'Lexus RX 450h', 'Ford F-150 King Ranch', 'Nissan Rogue SV', 'Chevrolet Traverse LT', 'Hyundai Elantra GT', 'Ford Explorer ST'
+]
 ##############====PHYSICAL APPEARANCE==========##########
 hair_color = ['Black', 'Brown', 'Blonde', 'Auburn', 'Red', 'Chestnut', 'Gray', 'White']
 eyes_color = ['Brown', 'Amber', 'Hazel', 'Green', 'Blue', 'Gray']
 blood_type = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
 #############====PERSONALITIES=============#############
-religion = ['Buddhism', 'Christianity', 'Confucianism', 'Hinduism', 'Islam', 'Jainism', 'Judaism', 'Sikhism', 'Taoism', 'Unaffiliated']
+religion = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
+    'Confucianism', 'Jainism', 'Taoism', 'Zoroastrianism', 'Paganism', 'Atheism', 'Agnosticism', 
+    'Unitarian Universalism', 'Church of Scientology', 'Rastafarianism', 'Wicca', 'Shamanism', 
+    'Baha\'i Faith', 'New Age Spirituality', 'Humanism', 'Deism', 'Pastafarianism'
+]
 favorite_color = ['Red', 'Yellow', 'Green', 'Cyan', 'Blue', 'Magenta', 'Violet', 'Rose', 'Azure', 'Spring green', 'Chartreuse', 'Orange']
 political_side = ['Democratic Part (Left-wing/Progressive)', 'Republican Party (Right-wing Conservative)', 'Libertarian Party (Lbertarianism)', 'Green Party (Environment/Progressivism)', 'Constitution Party (Conservatism/Traditionalism)', 'Socialist Party USA (Socialism)', 'Independent (Unaffiliated)', 'Progressive Movement (Progressivism)', 'Tea Party Movement (Conservatism)', 'Alt-right (Far-right)', 'Anarchism (Anarchist Movement)', 'Democratic Socialist Movement']
 favorite_animals = ['Dog', 'Cat', 'Elephant', 'Tiger', 'Lion', 'Dolphin', 'Horse', 'Penguin', 'Koala', 'Kangaroo',
@@ -208,30 +299,47 @@ favorite_foods = ['Hamburger', 'Pizza', 'Hot Dog', 'Fried Chicken', 'Mac and Che
     'Roast Chicken', 'Baked Ziti', 'Chicken Tenders', 'Lamb Chops', 'Churros', 'Fish and Chips', 'Peking Duck',
     'Beef Burritos', 'Pulled Pork Sandwich', 'Chicken and Dumplings', 'Baked Beans', 'Peking Duck', 'Pasta Bolognese'
 ]
+email_providers = [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
+    'zoho.com', 'mail.com', 'yandex.com', 'gmx.com', 'comcast.net', 'me.com', 'msn.com', 'mail.ru', 
+    'live.com', 'rocketmail.com', 'fastmail.com', 'tutanota.com', 'hushmail.com', 'inbox.com', 
+    'rediffmail.com', 'yahoo.co.uk', 'gmx.de', 'virmail.com', 'bluebottle.com', 'mailchimp.com', 
+    'mac.com', 'seznam.cz', 'gawab.com', 'lycos.com', 'cableone.net', 'shaw.ca', 'virginmedia.com',
+    'sbcglobal.net', 'att.net', 'earthlink.net', 'juno.com', 'netzero.net', 'optimum.net', 'bell.net',
+    'cox.net', 'charter.net', 'fuse.net', 'epix.net', 'frontier.com', 'rcn.com', 'windstream.net',
+    'mailinator.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com', 'yopmail.com', 
+    'dispostable.com', 'trashmail.com', 'spambox.us', 'spamex.com', 'maildrop.cc', 'throwawaymail.com',
+    'spamgourmet.com', 'mailcatch.com', 'getnada.com', 'tempinbox.com', 'dodgit.com', 'fakeinbox.com',
+    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com'
+]
+
+
 
 for male_person in range(1):
     output_first_names_male = random.choice(first_names_male)
     output_middle_name = random.choice(male_middle_names)
     output_last_names = random.choice(last_names)
-    output_bday = f'{random.randint(1,30)}dd, {random.randint(1, 12)}mm, {random.randint(1500,2024)}'
+    output_bday = f'{random.randint(1,30)}dd, {random.randint(1, 12)}mm, {random.randint(1924,2024)}'
+    output_birthplace = f'{random.choice(cities)}, USA'
     output_gender = 'Male'
     output_phone = f'{random.randint(100, 999)}-555-{random.randint(1000,9999)}'
-    output_ssn = random.randint(000000000, 999999999)
+    output_ssn = f'{random.randint(000, 999)}-{random.randint(00,99)}-{random.randint(000,999)}'
     output_street_num = random.randint(100, 999)
     output_street = random.choice(street_names)
-    output_city = random.choice(fake_cities)
+    output_city = random.choice(cities)
     output_state = random.choice(states)
     output_zip_code = random.randint(10000, 99999)
     output_zodiac = random.choice(ziodiac_sign)
     output_address = f'{output_street_num} {output_street} St., {output_city} {output_state} {output_zip_code}'
-    output_email = f'{output_first_names_male.lower()}{output_last_names.lower()}@gmail.com'
+    output_email = f'{output_first_names_male.lower()}{output_last_names.lower()}@{random.choice(email_providers)}'
     output_driver_license = f'A{random.randint(0000000, 9999999)}'
-    # =========PHYSICAL APPEARANCE=====
+    output_car = random.choice(car)
+#   =========PHYSICAL APPEARANCE=====
     output_hair_color = random.choice(hair_color)
     output_eyes_color = random.choice(eyes_color)  
     output_height =  f'{random.randint(0, 1), random.randint(0, 99)}'
     output_weight = random.randint(45, 100)
-#    shoe_size =
+    output_shoe_size = random.randint(5, 20)
     output_blood_type = random.choice(blood_type)
 #   =========PERSONALITIES==============
     output_religion = random.choice(religion)
@@ -243,8 +351,9 @@ for male_person in range(1):
     output_favorite_animal = random.choice(favorite_animals)
     output_lucky_number = random.randint(0, 99)
 #    print('US CAR ') #(https://www.businer.com/uscarlicenseplates.php)
-    print(f'Name: {output_first_names_male}\nMiddle Name: {output_middle_name}\nLast Name: {output_last_names}\nBirthday: {output_bday}\nZodiac Sign: {output_zodiac}\nGender: {output_gender}\nPhone: {output_phone}\nAddress: {output_address}\nSocial Security Number (SSN): {output_ssn}\nE-mail: {output_email}\nDriver license: {output_driver_license}\n')
+    print(f'Name: {output_first_names_male}\nMiddle Name: {output_middle_name}\nLast Name: {output_last_names}\nBirthday: {output_bday}\nBrithplace: {output_birthplace}\nZodiac Sign: {output_zodiac}\nGender: {output_gender}\nPhone: {output_phone}\nAddress: {output_address}\nSocial Security Number (SSN): {output_ssn}\nE-mail: {output_email}\nDriver license: {output_driver_license}\nCar: {output_car}')
     print('=====PHYSICAL APPERANCE====')
-    print(f'Hair color: {output_hair_color}\nEyes color: {output_eyes_color}\nHeight: {output_height}\nWeight: {output_weight}\nBlood Type: {output_blood_type}')
+    print(f'Hair color: {output_hair_color}\nEyes color: {output_eyes_color}\nHeight: {output_height}\nWeight: {output_weight}\nShoe size: {output_shoe_size}\nBlood Type: {output_blood_type}')
     print('====PERSONALITIES====')
-    print(f'Religion: {output_religion}\nPolitical Side: {output_political_side}\nFavorite Color: {output_favorite_color}\nFavorite Food: {output_favorite_food}\nFavorite Animal: {output_favorite_animal}\nLucky Number: {output_lucky_number}')
+    print(f'Religion: {output_religion}\nPolitical Side: {output_political_side}\nFavorite Color: {output_favorite_color}\nFavorite Food: {output_favorite_food}\nFavorite Cereal: {output_favorite_cereal}\nFavorite Season: {output_favorite_season}\nFavorite Animal: {output_favorite_animal}\nLucky Number: {output_lucky_number}')
+
