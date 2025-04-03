@@ -1,4 +1,6 @@
 import random
+from datetime import datetime, timedelta
+import string
 
 # Names Lists
 first_names_male = ['Victor', 'Reed', 'Tobias', 'Axel', 'Chase', 'Milo', 'Nolan', 'Dean', 'Owen', 'Gage',
@@ -314,8 +316,41 @@ def choose_gender():
 chosen_gender = choose_gender()
 print(f"[INFO] The selected gender is: {chosen_gender}")
 
+def generate_random_birthday():
+    today = datetime.today()
+    age_range_start = 18
+    age_range_end = 100
+    age = random.randint(age_range_start, age_range_end)
+    birth_year = today.year - age
+    random_month = random.randint(1, 12)
+    days_in_month = [31, 29 if (birth_year % 4 == 0 and (birth_year % 100 != 0 or birth_year % 400 == 0)) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    random_day = random.randint(1, days_in_month[random_month - 1])
+    random_birthday = datetime(birth_year, random_month, random_day)
+    return random_birthday, age
+birthday, age = generate_random_birthday()
+
 def get_random_item(item_list):
     return random.choice(item_list)
+
+def generate_driver_license():
+    state = random.choice(states)
+    number_length = random.randint(7,9)
+    number = ''.join(random.choices(string.digits, k=number_length))
+    letter_suffix = ''.join(random.choices(string.ascii_uppercase, k=random.randint(1, 2)))
+    license_number = f"{state}-{number}-{letter_suffix}"
+    return license_number
+random_license = generate_driver_license() 
+    
+def generate_random_address():
+    state = random.choice(states)
+    city = random.choice(cities)
+    street_number = random.randint(100, 9999)
+    street_name = random.choice(street_names)
+    street_address = f"{street_number} {street_name} St."
+    zip_code = random.randint(10000, 99999)
+    address = f"{street_address} {city}, {state} {zip_code}"
+    return address
+random_address = generate_random_address()
 
 def generate_random_person():
     if chosen_gender == 'Male':
@@ -324,27 +359,20 @@ def generate_random_person():
     else:
         first_name = get_random_item(first_names_female)
         middle_name = get_random_item(female_middle_names)
-
     last_name = get_random_item(last_names)
     full_name = f"{first_name} {middle_name} {last_name}"
-    street_number = {random.randint(100, 999)}
-    street = {get_random_item(street_names)}
-    city = {get_random_item(cities)}
-    state = {get_random_item(states)}
-    zip_code = {random.randint(10000, 99999)}
-
     return {
         print("\n====PERSONAL INFORMATION===="),
         print(f"Name: {full_name}"),
         print(f"Gender: {chosen_gender}"),
- #       print(f"Birthday: ")
+        print(f"Birthday: {birthday.strftime('%B %d, %Y')} (Age: {age})"),
         print(f"Birthplace: {get_random_item(cities)}, USA"),
-        print(f"Phone: {random.randint(100,999)}-555-{random.randint(1000,9999)}"),
+        print(f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}"),
         print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
-        print(f"Address: {street_number} {street} St., {city} {state} {zip_code}"),
+        print(f"Address: {random_address}"),
         print(f"Ziodiac sign: {get_random_item(ziodiac_sign)}"),
-        print(f"{full_name}@{get_random_item(email_providers)}"),
-        print(f"Driver license: A{random.randint(000000000, 999999999)}"),
+        print(f"E-mail: {first_name.lower()}{last_name.lower()}@{get_random_item(email_providers)}"),
+        print(f"Driver license: {random_license}"),
         print(f"Car: {get_random_item(car)}"),
         print('\n====PHYSICAL APPEARANCE===='),
         print(f"Hair color: {get_random_item(hair_color)}"),
