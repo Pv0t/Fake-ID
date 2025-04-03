@@ -1,5 +1,6 @@
 import random
 
+# Names Lists
 first_names_male = ['Victor', 'Reed', 'Tobias', 'Axel', 'Chase', 'Milo', 'Nolan', 'Dean', 'Owen', 'Gage',
     'Rowan', 'Shane', 'Dorian', 'Graham', 'Vaughn', 'Dexter', 'Cole', 'Xander', 'Weston', 'Alec',
     'Warren', 'Bryce', 'Mason', 'Alfred', 'Julian', 'Isaiah', 'Aidan', 'Miles', 'Ryder', 'Nathaniel',
@@ -72,8 +73,7 @@ first_names_female = ['Olivia', 'Emma', 'Ava', 'Charlotte', 'Sophia', 'Amelia', 
     'Ella', 'Quinn', 'Olivia', 'Valentina', 'Norah', 'Stella', 'Amaya', 'Addison', 'Violet', 'Willow', 'Ruby',
     'Zoe', 'Ariana', 'Penelope', 'Sophie', 'Julia', 'Aubrey', 'Hannah', 'Lucy', 'Ava', 'Autumn', 'Madeline',
     'Leilani', 'Caroline', 'Julia', 'Charlotte', 'Vera', 'Adeline', 'Eleanor', 'Scarlett', 'Addison', 'Zoe',
-    'Vivian', 'Kaitlyn', 'Avery', 'Lily', 'Emma', 'Mackenzie', 'Reagan', 'Sarah', 'Hannah', 'Paige', 'Josephine'
-]
+    'Vivian', 'Kaitlyn', 'Avery', 'Lily', 'Emma', 'Mackenzie', 'Reagan', 'Sarah', 'Hannah', 'Paige', 'Josephine']
 last_names = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller', 'Davis', 'García', 'Rodríguez', 'Wilson',
     'Martínez', 'Anderson', 'Taylor', 'Thomas', 'Hernández', 'Moore', 'Martin', 'Jackson', 'Thompson', 'White',
     'Lopez', 'Lee', 'González', 'Harris', 'Clark', 'Lewis', 'Roberts', 'Walker', 'Young', 'Allen',
@@ -102,8 +102,7 @@ last_names = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller', 'Davis
     'Stone', 'Chang', 'Curtis', 'Rowe', 'Gibson', 'Barker', 'Harrison', 'Holloway', 'Richards', 'Fowler',
     'Howard', 'Perry', 'Mason', 'Watson', 'Kelley', 'Vazquez', 'Sims', 'Mendoza', 'Bowman', 'Ramos',
     'Santiago', 'Liu', 'Nunez', 'Peters', 'Barnes', 'Parker', 'Franklin', 'Wood', 'Murphy', 'Klein',
-    'Nichols', 'O’Neill', 'Spencer', 'Matthews', 'Diaz', 'Harris', 'Willis', 'Mcdonald', 'Williamson'
-]
+    'Nichols', 'O’Neill', 'Spencer', 'Matthews', 'Diaz', 'Harris', 'Willis', 'Mcdonald', 'Williamson']
 male_middle_names = ['James', 'John', 'William', 'Joseph', 'David', 'Michael', 'Thomas', 'Charles', 'Lee', 'Edward',
     'Ray', 'Jameson', 'Robert', 'Alexander', 'Paul', 'Allen', 'Richard', 'Benjamin', 'Elliott', 'Josephine',
     'Ryan', 'Scott', 'Daniel', 'Samuel', 'George', 'Patrick', 'Andrew', 'Thomas', 'Christopher', 'William',
@@ -126,8 +125,7 @@ male_middle_names = ['James', 'John', 'William', 'Joseph', 'David', 'Michael', '
     'Luke', 'Roger', 'Morris', 'Wyatt', 'Isaiah', 'Anthony', 'Colin', 'Albert', 'Quinton', 'Craig', 'Wayne',
     'Mack', 'Jared', 'Travis', 'Steven', 'Mason', 'Elliott', 'Franklin', 'Russell', 'Avery', 'Trenton', 'Dorian',
     'Donovan', 'Kendall', 'Landon', 'Roy', 'Gage', 'Reed', 'Owen', 'Adrian', 'Eli', 'Lyle', 'Nash', 'Zachariah',
-    'Damien', 'Derrick', 'Randy', 'Chad', 'Lamar', 'Cameron', 'Jeffrey', 'Colton', 'Lee', 'Reid', 'Mitchell', 'Dustin'
-]
+    'Damien', 'Derrick', 'Randy', 'Chad', 'Lamar', 'Cameron', 'Jeffrey', 'Colton', 'Lee', 'Reid', 'Mitchell', 'Dustin']
 female_middle_names = ['Marie', 'Ann', 'Elizabeth', 'Grace', 'Rose', 'Lynn', 'Lee', 'Jane', 'Eve', 'Mae',
     'Nicole', 'Alice', 'Ruth', 'Claire', 'Faith', 'Jean', 'Catherine', 'Victoria', 'Louise', 'Diane',
     'Joan', 'May', 'Jeanette', 'Helen', 'Jade', 'Sophia', 'Paige', 'Charlotte', 'Leigh', 'Irene',
@@ -153,13 +151,11 @@ female_middle_names = ['Marie', 'Ann', 'Elizabeth', 'Grace', 'Rose', 'Lynn', 'Le
     'Emma', 'Samantha', 'Arianna', 'Sophia', 'Morgan', 'Ashley', 'Mikayla', 'Natalie', 'Lydia',
     'Ella', 'Riley', 'Lillian', 'Zoe', 'Bailey', 'Gabrielle', 'Taylor', 'Gianna', 'Melanie', 'Adrianna',
     'Jade', 'Fiona', 'Elise', 'Tessa', 'Addison', 'Faith', 'Mikayla', 'Eva', 'Andrea', 'Isabel', 'Ruby',
-    'Caroline', 'Taylor', 'Marissa', 'Ruth', 'Emily', 'Mila', 'Mariana', 'Adeline', 'Catherine', 'Lydia'
-]
-#birthplace = ['test']
+    'Caroline', 'Taylor', 'Marissa', 'Ruth', 'Emily', 'Mila', 'Mariana', 'Adeline', 'Catherine', 'Lydia']
+
+# Zodiac and Location
 ziodiac_sign = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 
-    'Capricorn', 'Aquarius', 'Pisces'
-]
-gender = ['Male', 'Female']
+    'Capricorn', 'Aquarius', 'Pisces']
 street_names = [
     'Main Street', 'First Street', 'Second Street', 'Third Street', 'Elm Street', 'Oak Street', 'Pine Street',
     'Maple Street', 'Washington Street', 'Broadway', 'High Street', 'Park Avenue', 'King Street', 'Church Street',
@@ -175,8 +171,7 @@ street_names = [
     'Briargate Road', 'New Hope Road', 'Parkwood Drive', 'Thornhill Street', 'Windsor Road', 'Chestnut Street',
     'Hickory Lane', 'Crescent Avenue', 'Valley Road', 'Sunrise Boulevard', 'Silver Oak Drive', 'Rolling Hills Road',
     'Riverstone Lane', 'Belfast Road', 'Bristol Drive', 'Cottonwood Avenue', 'Chestnut Avenue', 'Glenwood Road',
-    'Silver Creek Drive', 'Eagle Street', 'Springdale Road', 'Copperstone Drive', 'Mountain View Drive', 'Beach Street'
-]
+    'Silver Creek Drive', 'Eagle Street', 'Springdale Road', 'Copperstone Drive', 'Mountain View Drive', 'Beach Street']
 cities = [
     'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 
     'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'San Francisco',
@@ -197,8 +192,7 @@ cities = [
     'West Valley City', 'Lewisville', 'Huntington', 'Gresham', 'Fargo', 'Glendale', 'South Bend', 'Edmond',
     'Columbus', 'Round Rock', 'Nampa', 'Shreveport', 'Lafayette', 'Baton Rouge', 'Tallahassee', 
     'Tempe', 'Chattanooga', 'Syracuse', 'Albany', 'Denton', 'Allentown', 'Lansing', 'Evansville', 'Toledo', 
-    'Pueblo', 'Chico', 'Bend', 'Springfield', 'Cedar Rapids', 'Tallahassee', 'Lincoln', 'Overland Park'
-]
+    'Pueblo', 'Chico', 'Bend', 'Springfield', 'Cedar Rapids', 'Tallahassee', 'Lincoln', 'Overland Park']
 states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 car = ['Toyota Corolla', 'Honda Civic', 'Ford F-150', 'Chevrolet Silverado', 'Ram 1500', 'Honda Accord', 
     'Toyota Camry', 'Nissan Altima', 'Ford Mustang', 'Chevrolet Equinox', 'Jeep Grand Cherokee', 'Tesla Model 3', 
@@ -249,18 +243,18 @@ car = ['Toyota Corolla', 'Honda Civic', 'Ford F-150', 'Chevrolet Silverado', 'Ra
     'BMW X6', 'Chevrolet Tahoe Z71', 'Nissan Pathfinder', 'Toyota Land Cruiser 70', 'Honda Accord Sport', 'Hyundai Ioniq 5',
     'Ram 2500 Tradesman', 'Ford F-150 Tremor', 'Chevrolet Malibu Hybrid', 'Mazda CX-7', 'Kia Sportage', 'Chrysler Pacifica Hybrid',
     'Nissan Juke Nismo', 'Chevrolet Bolt', 'Subaru Crosstrek Hybrid', 'Audi Q8', 'GMC Sierra 2500HD', 'Jeep Cherokee Latitude',
-    'Lexus RX 450h', 'Ford F-150 King Ranch', 'Nissan Rogue SV', 'Chevrolet Traverse LT', 'Hyundai Elantra GT', 'Ford Explorer ST'
-]
-##############====PHYSICAL APPEARANCE==========##########
+    'Lexus RX 450h', 'Ford F-150 King Ranch', 'Nissan Rogue SV', 'Chevrolet Traverse LT', 'Hyundai Elantra GT', 'Ford Explorer ST']
+
+# Physical Appearance
 hair_color = ['Black', 'Brown', 'Blonde', 'Auburn', 'Red', 'Chestnut', 'Gray', 'White']
 eyes_color = ['Brown', 'Amber', 'Hazel', 'Green', 'Blue', 'Gray']
 blood_type = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
-#############====PERSONALITIES=============#############
+
+# Personality
 religion = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
     'Confucianism', 'Jainism', 'Taoism', 'Zoroastrianism', 'Paganism', 'Atheism', 'Agnosticism', 
     'Unitarian Universalism', 'Church of Scientology', 'Rastafarianism', 'Wicca', 'Shamanism', 
-    'Baha\'i Faith', 'New Age Spirituality', 'Humanism', 'Deism', 'Pastafarianism'
-]
+    'Baha\'i Faith', 'New Age Spirituality', 'Humanism', 'Deism', 'Pastafarianism']
 favorite_color = ['Red', 'Yellow', 'Green', 'Cyan', 'Blue', 'Magenta', 'Violet', 'Rose', 'Azure', 'Spring green', 'Chartreuse', 'Orange']
 political_side = ['Democratic Part (Left-wing/Progressive)', 'Republican Party (Right-wing Conservative)', 'Libertarian Party (Lbertarianism)', 'Green Party (Environment/Progressivism)', 'Constitution Party (Conservatism/Traditionalism)', 'Socialist Party USA (Socialism)', 'Independent (Unaffiliated)', 'Progressive Movement (Progressivism)', 'Tea Party Movement (Conservatism)', 'Alt-right (Far-right)', 'Anarchism (Anarchist Movement)', 'Democratic Socialist Movement']
 favorite_animals = ['Dog', 'Cat', 'Elephant', 'Tiger', 'Lion', 'Dolphin', 'Horse', 'Penguin', 'Koala', 'Kangaroo',
@@ -273,17 +267,14 @@ favorite_animals = ['Dog', 'Cat', 'Elephant', 'Tiger', 'Lion', 'Dolphin', 'Horse
     'Hippopotamus', 'Anteater', 'Llama', 'Yak', 'Chameleon', 'Crab', 'Penguin', 'Dingo', 'Raven',
     'Armadillo', 'Starfish', 'Seahorse', 'Gecko', 'Camel', 'Moose', 'Rattlesnake', 'Toucan', 'Vulture',
     'Skunk', 'Wombat', 'Woodpecker', 'Coyote', 'Meerkat', 'Mantis', 'Squid', 'Elephant Seal',
-    'Seal', 'Manatee', 'Pufferfish', 'Dromedary', 'Sea Lion', 'Pelican', 'Marmot', 'Chipmunk', 'Octopus'
-]
-favorite_seasons = ['Spring', 'Summer', 'Autumn', 'Fall', 'Winter'
-]
+    'Seal', 'Manatee', 'Pufferfish', 'Dromedary', 'Sea Lion', 'Pelican', 'Marmot', 'Chipmunk', 'Octopus']
+favorite_seasons = ['Spring', 'Summer', 'Autumn', 'Fall', 'Winter']
 favorite_cereals = ['Frosted Flakes', 'Cheerios', 'Lucky Charms', 'Cinnamon Toast Crunch', 'Cap\'n Crunch', 'Honey Nut Cheerios',
     'Raisin Bran', 'Fruity Pebbles', 'Cornflakes', 'Coco Pebbles', 'Special K', 'Reese\'s Puffs', 'Kix', 'Frosted Mini Wheats',
     'Rice Krispies', 'Quaker Oatmeal', 'Shredded Wheat', 'Trix', 'Grape Nuts', 'Wheaties', 'Count Chocula',
     'Apple Jacks', 'Life Cereal', 'Golden Grahams', 'Honey Bunches of Oats', 'Cocoa Krispies', 'Post Selects',
     'Peanut Butter Crunch', 'Chex', 'Corn Pops', 'Cheerios (Apple Cinnamon)', 'Crave', 'Malt-O-Meal', 'Grape-Nuts Flakes',
-    'Sugar Smacks', 'Oatmeal Crisp', 'Smart Start', 'Puffed Rice', 'Puffed Wheat', 'Waffle Crisp', 'Crispix', 'Froot Loops'
-]
+    'Sugar Smacks', 'Oatmeal Crisp', 'Smart Start', 'Puffed Rice', 'Puffed Wheat', 'Waffle Crisp', 'Crispix', 'Froot Loops']
 favorite_foods = ['Hamburger', 'Pizza', 'Hot Dog', 'Fried Chicken', 'Mac and Cheese', 'Tacos', 'Burritos', 'Spaghetti',
     'Steak', 'Ribs', 'Chicken Wings', 'Cheeseburger', 'Sandwich', 'French Fries', 'Pasta', 'BBQ',
     'Donuts', 'Apple Pie', 'Ice Cream', 'Pancakes', 'Waffles', 'Grilled Cheese', 'Caesar Salad', 'Poke Bowl',
@@ -297,10 +288,8 @@ favorite_foods = ['Hamburger', 'Pizza', 'Hot Dog', 'Fried Chicken', 'Mac and Che
     'Tiramisu', 'Margarita Pizza', 'Pecan Pie', 'Peach Cobbler', 'Chocolate Chip Cookies', 'Pasta Alfredo',
     'Tuna Salad', 'Minestrone Soup', 'Beef Stew', 'Gravy', 'Shrimp Cocktail', 'Mushroom Risotto',
     'Roast Chicken', 'Baked Ziti', 'Chicken Tenders', 'Lamb Chops', 'Churros', 'Fish and Chips', 'Peking Duck',
-    'Beef Burritos', 'Pulled Pork Sandwich', 'Chicken and Dumplings', 'Baked Beans', 'Peking Duck', 'Pasta Bolognese'
-]
-email_providers = [
-    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
+    'Beef Burritos', 'Pulled Pork Sandwich', 'Chicken and Dumplings', 'Baked Beans', 'Peking Duck', 'Pasta Bolognese']
+email_providers = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
     'zoho.com', 'mail.com', 'yandex.com', 'gmx.com', 'comcast.net', 'me.com', 'msn.com', 'mail.ru', 
     'live.com', 'rocketmail.com', 'fastmail.com', 'tutanota.com', 'hushmail.com', 'inbox.com', 
     'rediffmail.com', 'yahoo.co.uk', 'gmx.de', 'virmail.com', 'bluebottle.com', 'mailchimp.com', 
@@ -310,50 +299,69 @@ email_providers = [
     'mailinator.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com', 'yopmail.com', 
     'dispostable.com', 'trashmail.com', 'spambox.us', 'spamex.com', 'maildrop.cc', 'throwawaymail.com',
     'spamgourmet.com', 'mailcatch.com', 'getnada.com', 'tempinbox.com', 'dodgit.com', 'fakeinbox.com',
-    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com'
-]
+    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com']
 
+def choose_gender():
+    gender_choice = input("[!] Please choose a gender (Male/Female): ")
+    if gender_choice == "Male":
+        gender = "Male"
+    elif gender_choice == "Female":
+        gender = "Female"
+    else:
+        print("[ERROR] Invalid choice! Please select 'Male' or 'Female'.")
+        return choose_gender()
+    return gender
+chosen_gender = choose_gender()
+print(f"[INFO] The selected gender is: {chosen_gender}")
 
+def get_random_item(item_list):
+    return random.choice(item_list)
 
-for male_person in range(1):
-    output_first_names_male = random.choice(first_names_male)
-    output_middle_name = random.choice(male_middle_names)
-    output_last_names = random.choice(last_names)
-    output_bday = f'{random.randint(1,30)}dd, {random.randint(1, 12)}mm, {random.randint(1924,2024)}'
-    output_birthplace = f'{random.choice(cities)}, USA'
-    output_gender = 'Male'
-    output_phone = f'{random.randint(100, 999)}-555-{random.randint(1000,9999)}'
-    output_ssn = f'{random.randint(000, 999)}-{random.randint(00,99)}-{random.randint(000,999)}'
-    output_street_num = random.randint(100, 999)
-    output_street = random.choice(street_names)
-    output_city = random.choice(cities)
-    output_state = random.choice(states)
-    output_zip_code = random.randint(10000, 99999)
-    output_zodiac = random.choice(ziodiac_sign)
-    output_address = f'{output_street_num} {output_street} St., {output_city} {output_state} {output_zip_code}'
-    output_email = f'{output_first_names_male.lower()}{output_last_names.lower()}@{random.choice(email_providers)}'
-    output_driver_license = f'A{random.randint(0000000, 9999999)}'
-    output_car = random.choice(car)
-#   =========PHYSICAL APPEARANCE=====
-    output_hair_color = random.choice(hair_color)
-    output_eyes_color = random.choice(eyes_color)  
-    output_height =  f'{random.randint(0, 1), random.randint(0, 99)}'
-    output_weight = random.randint(45, 100)
-    output_shoe_size = random.randint(5, 20)
-    output_blood_type = random.choice(blood_type)
-#   =========PERSONALITIES==============
-    output_religion = random.choice(religion)
-    output_political_side = random.choice(political_side)
-    output_favorite_color = random.choice(favorite_color)
-    output_favorite_food = random.choice(favorite_foods)
-    output_favorite_cereal =  random.choice(favorite_cereals)
-    output_favorite_season = random.choice(favorite_seasons)
-    output_favorite_animal = random.choice(favorite_animals)
-    output_lucky_number = random.randint(0, 99)
-#    print('US CAR ') #(https://www.businer.com/uscarlicenseplates.php)
-    print(f'Name: {output_first_names_male}\nMiddle Name: {output_middle_name}\nLast Name: {output_last_names}\nBirthday: {output_bday}\nBrithplace: {output_birthplace}\nZodiac Sign: {output_zodiac}\nGender: {output_gender}\nPhone: {output_phone}\nAddress: {output_address}\nSocial Security Number (SSN): {output_ssn}\nE-mail: {output_email}\nDriver license: {output_driver_license}\nCar: {output_car}')
-    print('=====PHYSICAL APPERANCE====')
-    print(f'Hair color: {output_hair_color}\nEyes color: {output_eyes_color}\nHeight: {output_height}\nWeight: {output_weight}\nShoe size: {output_shoe_size}\nBlood Type: {output_blood_type}')
-    print('====PERSONALITIES====')
-    print(f'Religion: {output_religion}\nPolitical Side: {output_political_side}\nFavorite Color: {output_favorite_color}\nFavorite Food: {output_favorite_food}\nFavorite Cereal: {output_favorite_cereal}\nFavorite Season: {output_favorite_season}\nFavorite Animal: {output_favorite_animal}\nLucky Number: {output_lucky_number}')
+def generate_random_person():
+    if chosen_gender == 'Male':
+        first_name = get_random_item(first_names_male)
+        middle_name = get_random_item(male_middle_names)
+    else:
+        first_name = get_random_item(first_names_female)
+        middle_name = get_random_item(female_middle_names)
 
+    last_name = get_random_item(last_names)
+    full_name = f"{first_name} {middle_name} {last_name}"
+    street_number = {random.randint(100, 999)}
+    street = {get_random_item(street_names)}
+    city = {get_random_item(cities)}
+    state = {get_random_item(states)}
+    zip_code = {random.randint(10000, 99999)}
+
+    return {
+        print("\n====PERSONAL INFORMATION===="),
+        print(f"Name: {full_name}"),
+        print(f"Gender: {chosen_gender}"),
+ #       print(f"Birthday: ")
+        print(f"Birthplace: {get_random_item(cities)}, USA"),
+        print(f"Phone: {random.randint(100,999)}-555-{random.randint(1000,9999)}"),
+        print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
+        print(f"Address: {street_number} {street} St., {city} {state} {zip_code}"),
+        print(f"Ziodiac sign: {get_random_item(ziodiac_sign)}"),
+        print(f"{full_name}@{get_random_item(email_providers)}"),
+        print(f"Driver license: A{random.randint(000000000, 999999999)}"),
+        print(f"Car: {get_random_item(car)}"),
+        print('\n====PHYSICAL APPEARANCE===='),
+        print(f"Hair color: {get_random_item(hair_color)}"),
+        print(f"Eyes color: {get_random_item(eyes_color)}"),
+#        print(f"Height: {random.randint(0, 1)}, {random.ranadint(0, 99)}"),
+        print(f"Weight: {random.randint(45, 100)}kg"),
+        print(f"Shoe size: {random.randint(5, 20)}"),
+        print(f"Blood type: {get_random_item(blood_type)}"),
+        print('\n====PERSONALITY===='),
+        print(f"Religion: {get_random_item(religion)}"),
+        print(f"Political side: {get_random_item(political_side)}"),
+        print(f"Favorite color: {get_random_item(favorite_color)}"),
+        print(f"Favorite cereal: {get_random_item(favorite_cereals)}"),
+        print(f"Favorite season: {get_random_item(favorite_seasons)}"),
+        print(f"Favorite animal: {get_random_item(favorite_animals)}"),
+        print(f"Lucky number: {random.randint(0, 99)}")
+    }
+
+person = generate_random_person()
+print(person)
