@@ -1,6 +1,6 @@
-# Fake ID Generator (Python Script)
+# Fake ID Generator
 This Python script is designed to generate **randomized fake IDs**, producing identification details that closely mimic real-world ID formats. 
-The generated IDs are entirely fictitious and do not contain any real or personal information, ensuring **privacy** and **security**.
+The generated IDs are entirely fictitious and do not contain any real or personal information.
 This tool is invaluable for **developers**, **testers**, and **data scientists** who need realistic yet fake data for applications, testing environments, or simulations. It is particularly useful for generating mock data in situations where real user information is either unsuitable or unavailable, maintaining privacy and anonymity in the process.
 
 >[!IMPORTANT]
@@ -8,15 +8,15 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 
 ## Key Features:
 - **Random Name Generation**:  
-  The script can generate a fake full name using a list of common first and last names or through a random name generator.
+  The script can generate a fake full name using a list of random first and last names.
 - **Random Date of Birth (DOB)**:  
   It generates a plausible birthdate within a specified range, ensuring the age group or required age is realistic.
 - **Fake Address**:  
-  The script can produce a fake address, including street name, city, state, and ZIP code, using predefined lists or random generators to resemble an address on a real ID.
+  The script can produce a fake address, including street name, city, state, and ZIP code, using predefined lists to resemble an address on a real ID.
 - **Fake Identification Number**:  
   A random but realistic ID number (e.g., driver's license number) is generated. The number may follow typical patterns for official documents, such as U.S. driver's licenses.
 - **Additional Customizable Details**:  
-  It can generate other personal details like gender, height, weight, and eye color. These fields are customizable to fit different use cases.
+  It can generate other personal details like gender, height, weight, and eye color.
 
 >[!WARNING]
 >## Warning & Disclaimer:
