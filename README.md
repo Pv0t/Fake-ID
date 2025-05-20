@@ -4,7 +4,7 @@ The generated IDs are entirely fictitious and do not contain any real or persona
 This tool is invaluable for **developers**, **testers**, and **data scientists** who need realistic yet fake data for applications, testing environments, or simulations. It is particularly useful for generating mock data in situations where real user information is either unsuitable or unavailable, maintaining privacy and anonymity in the process.
 
 >[!IMPORTANT]
-> This script generates user-related data, including ID numbers, addresses, and other personal details, based on common formats used in the United States.
+> This script generates random first names, last names, addresses, and other personal details, based on common formats used in the United States.
 
 ## Key Features:
 - **Random Name Generation**:  
