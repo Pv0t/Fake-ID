@@ -6,7 +6,7 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 >[!IMPORTANT]
 > This script generates random first names, last names, addresses, and other personal details, based on common formats used in the United States.
 
-## 1.1 Features
+## 1.1 Feature Overview
 - **Random Name Generation**:  
   The script can generate a fake full name using a list of random first and last names.
 - **Random Date of Birth (DOB)**:  
