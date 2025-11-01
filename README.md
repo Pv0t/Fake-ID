@@ -1,5 +1,5 @@
 # Fake ID Generator
-This Python script is designed to generate **randomized fake IDs**, producing identification details that closely mimic real-world ID formats. 
+This repository is designed to allow a python3 script to generate a randomized fake IDs, producing identification details that closely mimic real-world ID formats.
 The generated IDs are entirely fictitious and do not contain any real or personal information.
 This tool is invaluable for **developers**, **testers**, and **data scientists** who need realistic yet fake data for applications, testing environments, or simulations. It is particularly useful for generating mock data in situations where real user information is either unsuitable or unavailable, maintaining privacy and anonymity in the process.
 
