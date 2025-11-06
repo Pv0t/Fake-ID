@@ -529,7 +529,7 @@ USA_foods = [
     "hummus", "veggie burger"
 ]
 
-USA_political-side = [
+USA_political_side = [
     "Democratic Party", "Republican Party", "Libertarian Party",
     "Green Party", "Constitution Party", "Working Families Party",
     "Socialist Party", "Progressive Party", "Liberal", "Conservative",
