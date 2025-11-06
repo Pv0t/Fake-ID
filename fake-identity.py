@@ -4,7 +4,7 @@ import string
 
 #================================USA========================================#
 ##==========================PERSONAL INFORMATION======================##
-first_names_male = [
+USA_first_names_male = [
     "Liam", "Noah", "Oliver", "Theodore", "James", "Henry", "Mateo", "Elijah", 
     "Lucas", "William", "Benjamin", "Levi", "Ezra", "Sebastian", "Jack", 
     "Daniel", "Samuel", "Michael", "Ethan", "Asher", "John", "Hudson", "Luca", 
@@ -140,7 +140,7 @@ first_names_male = [
     "Halo", "Ronnie", "Vance", "Aden", "Ishaan", "Kace", "Stefan"
 ]
 
-first_names_female = [
+USA_first_names_female = [
     "Olivia", "Emma", "Amelia", "Charlotte", "Mia", "Sophia", "Isabella", 
     "Evelyn", "Ava", "Sofia", "Camila", "Harper", "Luna", "Eleanor", "Violet", 
     "Aurora", "Elizabeth", "Eliana", "Hazel", "Chloe", "Ellie", "Nora", 
@@ -287,7 +287,7 @@ first_names_female = [
     "Lavender", "Karter", "Raina"
 ]
 
-last_names = [
+USA_last_names = [
     "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", 
     "Davis", "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", 
     "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin", 
@@ -439,15 +439,14 @@ last_names = [
     "Daugherty", "Travis", "Tang"
 ]
 
-ziodiac_sign = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 
+USA_zodiac = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 
     'Capricorn', 'Aquarius', 'Pisces']
 
-religion = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
-    'Confucianism', 'Jainism', 'Taoism', 'Zoroastrianism', 'Paganism', 'Unitarian Universalism', 'Wicca', 'Baháʼí Faith']
-
+USA_religion = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
+    'Confucianism', 'Jainism', 'Taoism', 'Zoroastrianism', 'Paganism', 'Unitarian Universalism', 'Wicca']
 
 ##==========================PHYSICAL APPEARANCE======================================##
-favorite_color = [
+USA_colors = [
     "red", "blue", "green", "yellow", "orange", "purple", "pink", "brown",
     "black", "white", "gray", "grey", "cyan", "magenta", "lime", "navy",
     "maroon", "olive", "teal", "silver", "gold", "violet",
@@ -485,7 +484,7 @@ favorite_color = [
     "ochre", "sienna", "umber", "sepia", "turmeric", "saffron", "paprika"
 ]
 
-favorite_animals = [
+USA_animals = [
     "dog", "cat", "elephant", "lion", "tiger", "bear", "wolf", "fox",
     "deer", "rabbit", "squirrel", "mouse", "rat", "horse", "cow", "pig",
     "sheep", "goat", "monkey", "gorilla", "chimp", "kangaroo", "koala",
@@ -507,9 +506,9 @@ favorite_animals = [
     "zebra", "giraffe", "hippopotamus", "rhinoceros", "cheetah", "leopard"
 ]
 
-favorite_seasons = ['Spring', 'Summer', 'Autumn', 'Fall', 'Winter']
+USA_seasons = ['Spring', 'Summer', 'Autumn', 'Fall', 'Winter']
 
-favorite_foods = [
+USA_foods = [
     "pizza", "pasta", "lasagna", "spaghetti", "ravioli", "risotto", "gelato",
     "hamburger", "cheeseburger", "hot dog", "fried chicken", "steak", 
     "fried fish", "mac and cheese", "bbq ribs", "apple pie", "chocolate chip cookies",
@@ -530,7 +529,7 @@ favorite_foods = [
     "hummus", "veggie burger"
 ]
 
-political_side = [
+USA_political-side = [
     "Democratic Party", "Republican Party", "Libertarian Party",
     "Green Party", "Constitution Party", "Working Families Party",
     "Socialist Party", "Progressive Party", "Liberal", "Conservative",
@@ -560,7 +559,7 @@ email_providers = [
 ]
 
 
-car = [
+USA_car = [
     "Toyota Camry", "Honda Civic", "Ford F-150", "Chevrolet Silverado", "Nissan Altima",
     "Hyundai Elantra", "Kia Soul", "Subaru Outback", "Mazda CX-5", "Volkswagen Jetta",
     "BMW 3 Series", "Mercedes C-Class", "Audi A4", "Lexus ES", "Infiniti Q50",
