@@ -485,10 +485,6 @@ favorite_color = [
     "ochre", "sienna", "umber", "sepia", "turmeric", "saffron", "paprika"
 ]
 
-hair_color = ['Black', 'Brown', 'Blonde', 'Auburn', 'Red', 'Chestnut', 'Gray', 'White']
-eyes_color = ['Brown', 'Amber', 'Hazel', 'Green', 'Blue', 'Gray']
-blood_type = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
-
 favorite_animals = [
     "dog", "cat", "elephant", "lion", "tiger", "bear", "wolf", "fox",
     "deer", "rabbit", "squirrel", "mouse", "rat", "horse", "cow", "pig",
@@ -534,12 +530,115 @@ favorite_foods = [
     "hummus", "veggie burger"
 ]
 
+political_side = [
+    "Democratic Party", "Republican Party", "Libertarian Party",
+    "Green Party", "Constitution Party", "Working Families Party",
+    "Socialist Party", "Progressive Party", "Liberal", "Conservative",
+    "Moderate", "Progressive", "Libertarian", "Socialist",
+    "Democratic Socialist", "Populist", "Centrist",
+    "Neoliberal", "Neoconservative", "Classical Liberal",
+    "Social Liberal", "Fiscal Conservative", "Social Conservative", "Paleoconservative",
+    "Reactionary", "Anarchist", "Communist", "Capitalist", "Federalist", "Anti-Federalist",
+    "Whig", "Jacksonian Democrat", "Populist", "Progressive Era", "New Deal Democrat",
+    "Reagan Republican", "Tea Party", "Occupy Movement", "Alt-Right", "Alt-Left",
+    "Left-Wing", "Right-Wing", "Far-Left", "Far-Right", "Center-Left", "Center-Right",
+    "Establishment", "Anti-Establishment"
+]
+
+email_providers = [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
+    'zoho.com', 'mail.com', 'yandex.com', 'gmx.com', 'comcast.net', 'me.com', 'msn.com', 'mail.ru', 
+    'live.com', 'rocketmail.com', 'fastmail.com', 'tutanota.com', 'hushmail.com', 'inbox.com', 
+    'rediffmail.com', 'yahoo.co.uk', 'gmx.de', 'virmail.com', 'bluebottle.com', 'mailchimp.com', 
+    'mac.com', 'seznam.cz', 'gawab.com', 'lycos.com', 'cableone.net', 'shaw.ca', 'virginmedia.com',
+    'sbcglobal.net', 'att.net', 'earthlink.net', 'juno.com', 'netzero.net', 'optimum.net', 'bell.net',
+    'cox.net', 'charter.net', 'fuse.net', 'epix.net', 'frontier.com', 'rcn.com', 'windstream.net',
+    'mailinator.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com', 'yopmail.com', 
+    'dispostable.com', 'trashmail.com', 'spambox.us', 'spamex.com', 'maildrop.cc', 'throwawaymail.com',
+    'spamgourmet.com', 'mailcatch.com', 'getnada.com', 'tempinbox.com', 'dodgit.com', 'fakeinbox.com',
+    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com'
+]
 
 
+car = [
+    "Toyota Camry", "Honda Civic", "Ford F-150", "Chevrolet Silverado", "Nissan Altima",
+    "Hyundai Elantra", "Kia Soul", "Subaru Outback", "Mazda CX-5", "Volkswagen Jetta",
+    "BMW 3 Series", "Mercedes C-Class", "Audi A4", "Lexus ES", "Infiniti Q50",
+    "Acura TLX", "Cadillac CT5", "Genesis G80", "Tesla Model 3", "Tesla Model S",
+    "Tesla Model X", "Tesla Model Y", "Ford Mustang", "Chevrolet Corvette", "Dodge Challenger",
+    "Ford Explorer", "Chevrolet Equinox", "Jeep Grand Cherokee", "Toyota RAV4", "Honda CR-V",
+    "Subaru Forester", "Mazda CX-9", "Volkswagen Tiguan", "Nissan Rogue", "Hyundai Santa Fe",
+    "Kia Sorento", "Ford Escape", "Chevrolet Traverse", "Jeep Wrangler", "Toyota 4Runner",
+    "Honda Pilot", "GMC Yukon", "Chevrolet Tahoe", "Ford Expedition", "Lincoln Navigator",
+    "BMW X3", "Mercedes GLC", "Audi Q5", "Lexus RX", "Infiniti QX60", "Acura MDX",
+    "Cadillac Escalade", "Lincoln Aviator", "Volvo XC90", "Volvo XC60", "Porsche Macan",
+    "Porsche Cayenne", "Land Rover Range Rover", "Land Rover Discovery", "Jaguar F-Pace",
+    "Alfa Romeo Giulia", "Maserati Ghibli", "Lamborghini Huracan", "Ferrari 488", "McLaren 720S",
+    "Aston Martin DB11", "Bentley Continental", "Rolls-Royce Phantom", "Maybach S-Class",
+    "BMW 5 Series", "Mercedes E-Class", "Audi A6", "Lexus GS", "Infiniti Q70", "Acura RLX",
+    "Cadillac CT6", "Genesis G90", "BMW 7 Series", "Mercedes S-Class", "Audi A8", "Lexus LS",
+    "Toyota Prius", "Honda Insight", "Hyundai Ioniq", "Kia Niro", "Chevrolet Bolt", "Nissan Leaf",
+    "BMW i3", "Volkswagen ID.4", "Ford Focus", "Mazda3", "Nissan Sentra", "Hyundai Accent",
+    "Kia Rio", "Chevrolet Malibu", "Ford Fusion", "Dodge Charger", "Subaru Impreza",
+    "Volkswagen Golf", "Mini Cooper", "Fiat 500", "Smart Fortwo", "Mazda MX-5 Miata",
+    "Chevrolet Camaro", "Ford GT", "Dodge Viper", "Chevrolet Silverado HD", "Ford Super Duty",
+    "Ram 1500", "GMC Sierra", "Chevrolet Colorado", "Ford Ranger", "Toyota Tacoma",
+    "Nissan Titan", "Honda Accord", "Toyota Corolla", "Nissan Maxima", "Hyundai Sonata",
+    "Kia Optima", "Subaru Legacy", "Mazda6", "Volkswagen Passat", "Ford Taurus",
+    "Buick LaCrosse", "Chrysler 300", "Dodge Magnum", "Pontiac Grand Prix", "Oldsmobile Intrigue",
+    "Saturn Aura", "Suzuki Swift", "Mitsubishi Lancer", "Eagle Talon", "Plymouth Neon",
+    "Mercury Sable", "Lincoln Continental", "Cadillac DeVille", "Buick Century", "Oldsmobile Cutlass",
+    "Pontiac Grand Am", "Chevrolet Lumina", "Ford Crown Victoria", "Mercury Grand Marquis",
+    "Dodge Intrepid", "Chrysler Concorde", "Eagle Vision", "Plymouth Acclaim", "Dodge Stealth",
+    "Acura Legend", "Infiniti J30", "Nissan 300ZX", "Mazda RX-7", "Mitsubishi 3000GT",
+    "Toyota Supra", "Nissan 240SX", "Honda Prelude", "Acura Integra", "Mazda MX-6",
+    "Ford Probe", "Chevrolet Beretta", "Pontiac Firebird", "Toyota Celica", "Mazda 626",
+    "Subaru SVX", "Volkswagen Corrado", "Ford Bronco", "Chevrolet Blazer", "Isuzu Trooper",
+    "Mazda Navajo", "Plymouth Voyager", "Dodge Caravan", "Chrysler Town & Country", "Pontiac Trans Sport",
+    "Mercury Villager", "Nissan Quest", "Toyota Previa", "Honda Odyssey", "Mitsubishi Expo",
+    "Suzuki Sidekick", "Geo Tracker", "Isuzu Amigo", "Mazda B-Series", "Ford Aerostar",
+    "Chevrolet Astro", "GMC Safari", "Nissan Vanette", "Toyota Van", "Chrysler Voyager",
+    "Dodge Ram Van", "Ford E-Series", "Chevrolet Express", "GMC Savana", "Mercedes Sprinter",
+    "Fiat Ducato", "Renault Master", "Peugeot Boxer", "Citroën Jumper", "Volkswagen Crafter",
+    "Ford Transit", "Mercedes Vito", "Volkswagen Transporter", "Fiat Scudo", "Opel Vivaro",
+    "BMW X5", "Mercedes GLE", "Audi Q7", "Lexus GX", "Infiniti QX80", "Acura RDX",
+    "Cadillac XT5", "Lincoln MKX", "Volvo V90", "Volvo V60", "Porsche Panamera",
+    "Porsche 911", "Ferrari F8", "Lamborghini Aventador", "Maserati Levante", "Aston Martin DBX",
+    "Bentley Bentayga", "Rolls-Royce Cullinan", "Maybach GLS", "BMW X7", "Mercedes GLS",
+    "Audi Q8", "Lexus LX", "Toyota Sequoia", "Nissan Armada", "Subaru Ascent",
+    "Honda HR-V", "Kia Sportage", "Hyundai Kona", "Mazda CX-3", "Volkswagen Atlas",
+    "Ford Edge", "Chevrolet Trax", "Buick Encore", "Cadillac XT4", "Lincoln Corsair",
+    "Volvo S90", "Volvo S60", "Alfa Romeo Stelvio", "Fiat 500X", "Jeep Compass",
+    "Mitsubishi Outlander", "Suzuki Equator", "Isuzu Ascender", "Saab 9-3", "Opel Astra",
+    "Holden Commodore", "HSV Maloo", "Lotus Elise", "TVR Sagaris", "Morgan Plus 8",
+    "Caterham 7", "Noble M600", "RUF CTR", "Spyker C8", "Koenigsegg Agera",
+    "Pagani Huayra", "Bugatti Chiron", "Rimac Concept", "Tesla Roadster", "Polestar 2",
+    "Lucid Air", "Rivian R1T", "Ford Mustang Mach-E", "Chevrolet Silverado EV", "GMC Hummer EV",
+    "Nissan Ariya", "Hyundai Ioniq 5", "Kia EV6", "BMW iX", "Mercedes EQS",
+    "Audi e-tron", "Porsche Taycan", "Genesis GV60", "Volvo C40", "Subaru Solterra",
+    "Toyota bZ4X", "Honda Prologue", "Cadillac Lyriq", "Lincoln Star", "Mercedes EQE",
+    "BMW i4", "Audi Q4 e-tron", "Volkswagen ID. Buzz", "Fiat 500e", "Mini Cooper SE",
+    "Hyundai Ioniq 6", "Genesis Electrified GV70", "BMW X1", "Mercedes GLB", "Audi Q3",
+    "Lexus UX", "Infiniti QX50", "Acura ILX", "Cadillac ATS", "Lincoln MKZ",
+    "Volvo S80", "Alfa Romeo 4C", "Fiat 124 Spider", "Mazda MX-30", "Subaru BRZ",
+    "Toyota GR86", "Chevrolet Corvette Stingray", "Ford Shelby GT500", "Dodge Durango",
+    "Jeep Gladiator", "Toyota Land Cruiser", "Nissan Patrol", "Mercedes G-Class",
+    "Land Rover Defender", "Porsche 911 Turbo", "Ferrari Roma", "Lamborghini Urus",
+    "Maserati Quattroporte", "Aston Martin Vantage", "Bentley Flying Spur",
+    "Rolls-Royce Ghost", "Maybach S650", "BMW M3", "Mercedes AMG GT", "Audi RS6",
+    "Lexus RC F", "Infiniti Q60 Red Sport", "Acura NSX", "Cadillac CTS-V", "Lincoln Continental",
+    "Volvo XC40", "Alfa Romeo Giulietta", "Fiat Panda", "Jeep Renegade", "Mitsubishi Eclipse Cross",
+    "Suzuki Vitara", "Isuzu D-Max", "MG ZS", "Lynk & Co 01", "Geely Preface",
+    "Proton X70", "Perodua Axia", "Tata Nexon", "Mahindra XUV500", "Kia Stinger",
+    "Genesis GV80", "Volvo P1800", "Saab 900", "Opel Kadett", "Holden Monaro",
+    "HSV GTS", "Lotus Elan", "TVR Griffith", "Morgan Roadster", "Caterham Super Seven",
+    "Noble M400", "RUF Rt 12", "Spyker D8", "Koenigsegg CCXR", "Pagani Zonda",
+    "Bugatti Veyron", "Rimac Nevera", "Tesla Cybertruck", "Polestar 3", "Lucid Gravity",
+    "Rivian R1S", "Ford Lightning", "Chevrolet Equinox EV", "GMC Sierra EV", "Nissan Ariya EV",
+    "Hyundai Ioniq 7", "Kia EV9", "BMW Neue Klasse", "Mercedes EQB", "Audi A5 Sportback"
+]
 
-
-
-
+###########################################################################################################################################################################
 
 street_names = [
     'Main Street', 'First Street', 'Second Street', 'Third Street', 'Elm Street', 'Oak Street', 'Pine Street',
@@ -585,75 +684,8 @@ states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI'
 
 
 
-car = ['Toyota Corolla', 'Honda Civic', 'Ford F-150', 'Chevrolet Silverado', 'Ram 1500', 'Honda Accord', 
-    'Toyota Camry', 'Nissan Altima', 'Ford Mustang', 'Chevrolet Equinox', 'Jeep Grand Cherokee', 'Tesla Model 3', 
-    'BMW 3 Series', 'Audi A4', 'Mercedes-Benz C-Class', 'Volkswagen Jetta', 'Hyundai Elantra', 'Chevrolet Malibu',
-    'Nissan Rogue', 'Subaru Outback', 'Kia Sorento', 'Mazda CX-5', 'Chrysler Pacifica', 'Honda CR-V', 'Toyota RAV4', 
-    'Ford Escape', 'Chevrolet Traverse', 'BMW X5', 'Jeep Wrangler', 'Honda Pilot', 'Ram 2500', 'Chevrolet Tahoe', 
-    'Toyota Tacoma', 'Nissan Frontier', 'GMC Sierra 1500', 'Ford Explorer', 'Hyundai Tucson', 'Tesla Model X', 
-    'Ford Expedition', 'Lincoln Navigator', 'Kia Telluride', 'Subaru Forester', 'Mazda 3', 'Chevrolet Colorado', 
-    'BMW X3', 'Toyota Highlander', 'Ford Ranger', 'Audi Q5', 'Honda Odyssey', 'Ford Focus', 'Chevrolet Spark', 
-    'Toyota 4Runner', 'Honda Fit', 'Hyundai Santa Fe', 'Mazda MX-5 Miata', 'Nissan Sentra', 'Chrysler 300', 
-    'Buick Enclave', 'Ford Fusion', 'GMC Terrain', 'BMW 5 Series', 'Ford Fusion Hybrid', 'Toyota Sienna', 'Nissan Murano',
-    'Chevrolet Impala', 'Dodge Charger', 'Mazda CX-9', 'Chevrolet Suburban', 'Honda Ridgeline', 'Ford Bronco', 
-    'Toyota Prius', 'Honda Insight', 'Chevrolet Bolt EV', 'Kia Forte', 'Toyota Land Cruiser', 'GMC Yukon', 
-    'Chrysler 200', 'Toyota Sequoia', 'Ford Mustang Mach-E', 'Tesla Model S', 'Nissan Leaf', 'Jeep Cherokee', 
-    'Hyundai Ioniq', 'Rivian R1T', 'Ford F-250 Super Duty', 'Chevrolet Bolt', 'Toyota 86', 'Nissan Juke', 
-    'Jeep Gladiator', 'Chrysler Voyager', 'Hyundai Kona', 'Subaru Crosstrek', 'GMC Canyon', 'Honda HR-V', 
-    'Chevrolet Sonic', 'Nissan Titan', 'Ram 3500', 'BMW Z4', 'Toyota Avalon', 'Tesla Model Y', 'Kia Niro', 
-    'Chevrolet Traverse', 'Toyota Venza', 'Ford F-350 Super Duty', 'Dodge Durango', 'Mazda 6', 'Hyundai Veloster', 
-    'BMW 7 Series', 'Toyota Mirai', 'Cadillac Escalade', 'Chevrolet Corvette', 'Lexus RX', 'Acura MDX', 
-    'Lexus ES', 'Audi Q7', 'BMW X7', 'Jaguar F-Pace', 'Lexus GX', 'Subaru Legacy', 'Ford F-450 Super Duty',
-    'Ram 1500 Classic', 'Chevrolet Malibu Hybrid', 'Ford Mustang GT', 'Toyota Supra', 'Chevrolet Camaro', 
-    'Honda Civic Type R', 'Tesla Roadster', 'Dodge Challenger', 'Subaru WRX', 'Ford F-450', 'Nissan Altima Hybrid',
-    'Toyota Yaris', 'Honda CR-V Hybrid', 'Chevrolet Silverado HD', 'Ford F-150 Raptor', 'Toyota Corolla Hatchback', 
-    'Honda Insight Hybrid', 'Hyundai Palisade', 'Chevrolet Traverse High Country', 'Ford F-250', 'Honda Passport', 
-    'Toyota Tundra', 'Kia Stinger', 'Hyundai Ioniq Electric', 'Mazda CX-30', 'Chrysler 300C', 'Nissan Titan XD',
-    'Ford Expedition Max', 'Dodge Ram ProMaster', 'Chevrolet Express', 'Chevrolet Silverado 2500HD', 'Toyota Land Cruiser Prado',
-    'Ford F-350', 'GMC Sierra HD', 'Chevrolet Colorado ZR2', 'Nissan Rogue Sport', 'Mazda CX-50', 'Ram 3500 Limited',
-    'Toyota Venza Hybrid', 'Jeep Wagoneer', 'Dodge Grand Caravan', 'Chevrolet Spark EV', 'Chevrolet Volt', 'Ford Transit',
-    'Honda Civic Sedan', 'Honda Civic Hatchback', 'BMW i3', 'Mercedes-Benz E-Class', 'Ford Focus ST', 'Chevrolet Malibu RS', 
-    'Hyundai Genesis', 'Chevrolet Traverse RS', 'Honda Civic Si', 'Ram ProMaster City', 'Chrysler 300S', 'Tesla Model S Plaid',
-    'Toyota Camry Hybrid', 'Nissan 370Z', 'Chevrolet Camaro ZL1', 'Ford Bronco Sport', 'Audi S4', 'Volkswagen Passat', 
-    'Toyota C-HR', 'Lexus LS', 'Ford F-150 Lightning', 'Mazda 2', 'Kia K900', 'Hyundai Sonata Hybrid', 'Jeep Renegade', 
-    'Toyota Sequoia TRD Pro', 'Dodge Journey', 'Buick Encore', 'Ford Mustang Shelby GT500', 'Chevrolet Colorado WT',
-    'Chevrolet Silverado Z71', 'Mazda 5', 'Nissan Versa', 'Hyundai Sonata', 'Lexus RX 350', 'Nissan Leaf SV', 
-    'BMW X1', 'Dodge Durango SRT', 'Subaru Ascent', 'Honda Civic LX', 'Chevrolet Blazer', 'Ford Transit Connect', 
-    'Toyota Tacoma TRD Off-Road', 'Ram 2500 Power Wagon', 'Tesla Model X Performance', 'Kia Soul EV', 'Lexus GX 460',
-    'Chevrolet Malibu Premier', 'Ford Edge ST', 'Toyota Sienna Hybrid', 'Buick Envision', 'Jeep Compass', 'Toyota Prius Prime',
-    'Hyundai Santa Fe XL', 'Ford Focus Electric', 'Cadillac XT5', 'Chevrolet Silverado 3500HD', 'Tesla Model 3 Long Range',
-    'Honda Clarity', 'BMW i4', 'Mazda MX-30', 'Nissan Maxima', 'Ford Fusion Energi', 'Toyota Highlander Hybrid', 
-    'Hyundai Ioniq Hybrid', 'GMC Terrain Denali', 'Nissan Leaf Plus', 'Chevrolet Bolt EUV', 'Audi Q3', 'Subaru Impreza',
-    'BMW 2 Series', 'Honda HR-V Sport', 'Ford Escape Hybrid', 'Hyundai Kona Electric', 'Kia Sorento Hybrid', 
-    'Ram 1500 Laramie', 'Chevrolet Traverse Premier', 'Toyota Avalon Hybrid', 'Mazda CX-3', 'Lexus UX 250h', 
-    'Subaru Outback Wilderness', 'Ford F-150 Platinum', 'Chevrolet Trailblazer', 'Dodge Charger SRT', 'Chevrolet Traverse RS',
-    'Hyundai Tucson Hybrid', 'Jeep Cherokee Trailhawk', 'Tesla Model Y Performance', 'Nissan Murano Platinum', 
-    'Cadillac Escalade ESV', 'Honda Accord Hybrid', 'Buick Cascada', 'Ford Mustang Mach-E GT', 'Toyota Prius V', 
-    'Chevrolet Silverado Custom', 'Hyundai Elantra N', 'Ram 3500 Laramie', 'Volkswagen Golf R', 'Honda Civic Touring',
-    'GMC Canyon Denali', 'Jeep Renegade Trailhawk', 'Kia Niro EV', 'Chrysler 300 Limited', 'Ford Edge Titanium', 
-    'BMW X6', 'Chevrolet Tahoe Z71', 'Nissan Pathfinder', 'Toyota Land Cruiser 70', 'Honda Accord Sport', 'Hyundai Ioniq 5',
-    'Ram 2500 Tradesman', 'Ford F-150 Tremor', 'Chevrolet Malibu Hybrid', 'Mazda CX-7', 'Kia Sportage', 'Chrysler Pacifica Hybrid',
-    'Nissan Juke Nismo', 'Chevrolet Bolt', 'Subaru Crosstrek Hybrid', 'Audi Q8', 'GMC Sierra 2500HD', 'Jeep Cherokee Latitude',
-    'Lexus RX 450h', 'Ford F-150 King Ranch', 'Nissan Rogue SV', 'Chevrolet Traverse LT', 'Hyundai Elantra GT', 'Ford Explorer ST']
 
 
-political_side = ['Democratic Part (Left-wing/Progressive)', 'Republican Party (Right-wing Conservative)', 'Libertarian Party (Lbertarianism)', 'Green Party (Environment/Progressivism)', 'Constitution Party (Conservatism/Traditionalism)', 'Socialist Party USA (Socialism)', 'Independent (Unaffiliated)', 'Progressive Movement (Progressivism)', 'Tea Party Movement (Conservatism)', 'Alt-right (Far-right)', 'Anarchism (Anarchist Movement)', 'Democratic Socialist Movement']
-
-
-
-
-
-email_providers = ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
-    'zoho.com', 'mail.com', 'yandex.com', 'gmx.com', 'comcast.net', 'me.com', 'msn.com', 'mail.ru', 
-    'live.com', 'rocketmail.com', 'fastmail.com', 'tutanota.com', 'hushmail.com', 'inbox.com', 
-    'rediffmail.com', 'yahoo.co.uk', 'gmx.de', 'virmail.com', 'bluebottle.com', 'mailchimp.com', 
-    'mac.com', 'seznam.cz', 'gawab.com', 'lycos.com', 'cableone.net', 'shaw.ca', 'virginmedia.com',
-    'sbcglobal.net', 'att.net', 'earthlink.net', 'juno.com', 'netzero.net', 'optimum.net', 'bell.net',
-    'cox.net', 'charter.net', 'fuse.net', 'epix.net', 'frontier.com', 'rcn.com', 'windstream.net',
-    'mailinator.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com', 'yopmail.com', 
-    'dispostable.com', 'trashmail.com', 'spambox.us', 'spamex.com', 'maildrop.cc', 'throwawaymail.com',
-    'spamgourmet.com', 'mailcatch.com', 'getnada.com', 'tempinbox.com', 'dodgit.com', 'fakeinbox.com',
-    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com']
 
 def choose_gender():
     gender_choice = input("[!] Please choose a gender (Male/Female): ")
