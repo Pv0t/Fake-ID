@@ -7,16 +7,29 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 > This script generates random first names, last names, addresses, and other personal details, based on common formats used in the United States.
 
 ## 1.1 Feature Overview
-- **Random Name Generation**:  
-  The script can generate a fake full name using a list of random first and last names.
+- **1000+ American Names/Last Names (USA)**:  
+  The script contains over **1,000 names and last names**, including both female and male names commonly used in the USA.
 - **Random Date of Birth (DOB)**:  
   It generates a plausible birthdate within a specified range, ensuring the age group or required age is realistic.
-- **Fake Address**:  
-  The script can produce a fake address, including street name, city, state, and ZIP code, using predefined lists to resemble an address on a real ID.
-- **Fake Identification Number**:  
-  A random but realistic ID number (e.g., driver's license number) is generated. The number may follow typical patterns for official documents, such as U.S. driver's licenses.
-- **Additional Customizable Details**:  
-  It can generate other personal details like gender, height, weight, and eye color.
+- **Random zodiac signs**:  
+  The script maintains a collection of **12 zodiac signs** and performs random sampling to output one sign per execution.
+- **Random religion**:  
+  Supports **15 religion** with single-item random selection. Each execution produces one randomly chosen religion from the list.
+- **Random color**:  
+  Supports **175 colors** with single-item random selection. Each execution produces one randomly chosen color.
+- **Random animals**:  
+  The script supports a maximum of **125 animal**s and randomly selects one per output.
+- **Random favorite season**:  
+  Supports **5 seasons** with single-item random selection. Each execution produces one randomly chosen season from the available set.
+- **Random favorite foods**:  
+  The script supports a maximum of **67 foods items** and randomly selects one from this collection per execution.
+- **Random political side**:  
+  The script maintains a list of **44 political side** and employs a randomization to select one category per execution.
+- **Random e-mail providers**:  
+  The script is configured to handle up to **77 different e-mail service providers**, the script implements a randomization process that selects one e-mail provider for output.
+- **Random cars**:  
+  The script contains **500 car models**. Each time it runs, the script performs a random selection process to choose and output one vehicle.
+  
 
 >[!WARNING]
 >## Warning & Disclaimer:
