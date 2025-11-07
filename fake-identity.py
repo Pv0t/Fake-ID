@@ -644,7 +644,7 @@ def generate_random_person():
         print("%-3s %-50s %-4s %-120s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
         print("%-3s %-50s %-4s %-120s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(foods)}")),
         print("%-3s %-50s %-4s %-120s" % ("21c", f"Favorite color: {get_random_item(colors)}", "21d", f"Favorite season: {get_random_item(seasons)}")), 
-        print("%-3s %-50s %-4s %-120s" % ("21e", f"Favorite animal: {get_random_item(animals)}", "21f", f"Lucky number: {random.randint(0, 99)}")),
+        print("%-3s %-50s %-4s %-120s" % ("21e", f"Favorite animal: {get_random_item(animals)}", "21f", f"Favorite number: {random.randint(0, 99)}")),
         print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
     }
 
