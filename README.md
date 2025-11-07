@@ -7,28 +7,28 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 > This script generates random first names, last names, addresses, and other personal details, based on common formats used in the United States.
 
 ## 1.1 Feature Overview
-- **1000+ American Names/Last Names (USA)**:  
-  The script contains over **1,000 names and last names**, including both female and male names commonly used in the USA.
-- **Random Date of Birth (DOB)**:  
-  It generates a plausible birthdate within a specified range, ensuring the age group or required age is realistic.
-- **Random zodiac signs**:  
-  The script maintains a collection of **12 zodiac signs** and performs random sampling to output one sign per execution.
-- **Random religion**:  
-  Supports **15 religion** with single-item random selection. Each execution produces one randomly chosen religion from the list.
-- **Random color**:  
-  Supports **175 colors** with single-item random selection. Each execution produces one randomly chosen color.
-- **Random animals**:  
-  The script supports a maximum of **125 animal**s and randomly selects one per output.
-- **Random favorite season**:  
-  Supports **5 seasons** with single-item random selection. Each execution produces one randomly chosen season from the available set.
-- **Random favorite foods**:  
-  The script supports a maximum of **67 foods items** and randomly selects one from this collection per execution.
-- **Random political side**:  
-  The script maintains a list of **44 political side** and employs a randomization to select one category per execution.
-- **Random e-mail providers**:  
-  The script is configured to handle up to **77 different e-mail service providers**, the script implements a randomization process that selects one e-mail provider for output.
-- **Random cars**:  
-  The script contains **500 car models**. Each time it runs, the script performs a random selection process to choose and output one vehicle.
+- **1000+ American names/last names**
+- **Random license number**
+- **Random date of birth (DOB)**
+- **Random address**
+- **Random gender**
+- **Random height**
+- **Random weight**
+- **Random eyes color**
+- **Random birthplace**
+- **Random hair color**
+- **Random shoe size**
+- **Random blood type**
+- **Random zodiac sign**
+- **Random religion**
+- **Random favorite color**
+- **Random favorite animal**
+- **Random e-mail**
+- **Random phone number**
+- **Random favorite season**
+- **Random favorite food**  
+- **Random political side**  
+- **Random favorite number**
   
 
 >[!WARNING]
