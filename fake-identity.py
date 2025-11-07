@@ -637,6 +637,9 @@ USA_car = [
     "Hyundai Ioniq 7", "Kia EV9", "BMW Neue Klasse", "Mercedes EQB", "Audi A5 Sportback"
 ]
 
+eyes_color = [
+    "Brown", "Amber", "Hazel", "Green", "Blue", "Gray"
+]
 ###########################################################################################################################################################################
 
 street_names = [
@@ -680,29 +683,10 @@ cities = [
 states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 
 
-
-
-
-
-
-
-def choose_gender():
-    gender_choice = input("[!] Please choose a gender (Male/Female): ")
-    if gender_choice == "Male":
-        gender = "Male"
-    elif gender_choice == "Female":
-        gender = "Female"
-    else:
-        print("[ERROR] Invalid choice! Please select 'Male' or 'Female'.")
-        return choose_gender()
-    return gender
-chosen_gender = choose_gender()
-print(f"[INFO] The selected gender is: {chosen_gender}")
-
 def generate_random_birthday():
     today = datetime.today()
     age_range_start = 18
-    age_range_end = 100
+    age_range_end = 80
     age = random.randint(age_range_start, age_range_end)
     birth_year = today.year - age
     random_month = random.randint(1, 12)
@@ -712,8 +696,12 @@ def generate_random_birthday():
     return random_birthday, age
 birthday, age = generate_random_birthday()
 
+
 def get_random_item(item_list):
     return random.choice(item_list)
+
+def get_two_random_item(item2_list, item3_list):
+    return random.choice(item2_list)
 
 def generate_driver_license():
     state = random.choice(states)
@@ -723,54 +711,45 @@ def generate_driver_license():
     license_number = f"{state}-{number}-{letter_suffix}"
     return license_number
 random_license = generate_driver_license() 
-    
-def generate_random_address():
-    state = random.choice(states)
-    city = random.choice(cities)
-    street_number = random.randint(100, 9999)
-    street_name = random.choice(street_names)
-    street_address = f"{street_number} {street_name} St."
-    zip_code = random.randint(10000, 99999)
-    address = f"{street_address} {city}, {state} {zip_code}"
-    return address
-random_address = generate_random_address()
+
+
 
 def generate_random_person():
-    if chosen_gender == 'Male':
-        first_name = get_random_item(first_names_male)
-        middle_name = get_random_item(male_middle_names)
+    USA_first_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
+    if USA_first_name in USA_first_names_male:
+        gender = 'M'
     else:
-        first_name = get_random_item(first_names_female)
-        middle_name = get_random_item(female_middle_names)
-    last_name = get_random_item(last_names)
-    full_name = f"{first_name} {middle_name} {last_name}"
+        gender = 'F'
+    USA_last_name = get_random_item(USA_last_names)
     return {
-        print("\n====PERSONAL INFORMATION===="),
-        print(f"Name: {full_name}"),
-        print(f"Gender: {chosen_gender}"),
-        print(f"Birthday: {birthday.strftime('%B %d, %Y')} (Age: {age})"),
-        print(f"Birthplace: {get_random_item(cities)}, USA"),
-        print(f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}"),
-        print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
-        print(f"Address: {random_address}"),
-        print(f"Ziodiac sign: {get_random_item(ziodiac_sign)}"),
-        print(f"E-mail: {first_name.lower()}{last_name.lower()}@{get_random_item(email_providers)}"),
-        print(f"Driver license: {random_license}"),
-        print(f"Car: {get_random_item(car)}"),
-        print('\n====PHYSICAL APPEARANCE===='),
-        print(f"Hair color: {get_random_item(hair_color)}"),
-        print(f"Eyes color: {get_random_item(eyes_color)}"),
-#        print(f"Height: {random.randint(0, 1)}, {random.ranadint(0, 99)}"),
-        print(f"Weight: {random.randint(45, 100)}kg"),
-        print(f"Shoe size: {random.randint(5, 20)}"),
-        print(f"Blood type: {get_random_item(blood_type)}"),
-        print('\n====PERSONALITY===='),
-        print(f"Religion: {get_random_item(religion)}"),
-        print(f"Political side: {get_random_item(political_side)}"),
-        print(f"Favorite color: {get_random_item(favorite_color)}"),
-        print(f"Favorite cereal: {get_random_item(favorite_cereals)}"),
-        print(f"Favorite season: {get_random_item(favorite_seasons)}"),
-        print(f"Favorite animal: {get_random_item(favorite_animals)}"),
+        print("IDENTIFICATION CARD".center(80, '-')),
+        print(""),
+        print("4d".center(0), f"LIC NO. ({random.randint(1000,9990)})-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}".center(10)),
+        print("3".center(0), f" DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})".center(10)),
+        print("4b".center(0), f"EXP: STILL NEED TO BE PROGRAMMED".center(10),                                       f"4a ISS: 05/02/2005".center(50)),
+        print("1".center(0), f" Name: {USA_first_name}".center(10)),
+        print("2".center(0), f" Surname: {USA_last_name}".center(10)),
+        print("8".center(0), f" Address: still need to be programmed".center(10)),
+        print(f"City, State, ZIP Code"),
+        print(f" "),
+        print(f" "),
+        print("15".center(0), f"SEX: {gender}".center(10),                           f"16 HGT: STILL NEED TO BE PROGRAMMED".center(50)),
+        print("17".center(0), f"WGT: {random.randint(132, 197)}lbs".center(10),      f"18 EYES: {get_random_item(eyes_color)}".center(50)),
+        
+        print(" "),
+        print(" "),
+        print("MORE ABOUT YOU:".center(80, '-')),
+        print(f"Birthplace: {get_random_item(cities)}, USA                      Zodiac Sign: {get_random_item(USA_zodiac)}"),
+        #print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
+        print(f"E-mail: {first_name.lower()}{last_name.lower()}@{get_random_item(email_providers)}            Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}"),
+        print(f"Driver license: {random_license}                                    Car: {get_random_item(car)}"),
+        #print(f"Hair color: {get_random_item(hair_color)}                    Shoe size: {random.randint(5, 20)}"),
+        #print(f"Blood type: {get_random_item(blood_type)}                      Religion: {get_random_item(religion)}"),
+        #print(f"Political side: {get_random_item(political_side)}"),
+        #print(f"Favorite food: {get_random_item(USA_foods)}",
+        #print(f"Favorite color: {get_random_item(favorite_color)}"),
+        #print(f"Favorite season: {get_random_item(favorite_seasons)}"),
+        #print(f"Favorite animal: {get_random_item(favorite_animals)}"),
         print(f"Lucky number: {random.randint(0, 99)}")
     }
 
