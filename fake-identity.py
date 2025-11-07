@@ -560,6 +560,23 @@ USA_cities = [
     "Norfolk", "Fremont", "Garland", "Irving", "Hialeah"
 ]
 
+blood_types = [
+    "A+", "A-", "B+", "B-",
+    "AB+", "AB-", "O+", "O-"
+]
+
+USA_states = [
+    "Alabama", "Alaska", "Arizona", "Arkansas", "California",
+    "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
+    "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+    "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+    "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
+    "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
+    "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+    "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+    "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
+    "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+]
 
 def generate_random_birthday():
     today = datetime.today()
@@ -582,15 +599,21 @@ def get_two_random_item(item2_list, item3_list):
     chosen_list = random.choice([item2_list, item3_list])
     return random.choice(chosen_list)
 
-def generate_driver_license():
-    state = random.choice(states)
-    number_length = random.randint(7,9)
-    number = ''.join(random.choices(string.digits, k=number_length))
-    letter_suffix = ''.join(random.choices(string.ascii_uppercase, k=random.randint(1, 2)))
-    license_number = f"{state}-{number}-{letter_suffix}"
-    return license_number
-random_license = generate_driver_license() 
-
+def id_issued():
+    this_year = datetime.now().year
+    start_year = this_year - 4
+    end_year = this_year
+    issued_year = random.randint(start_year, end_year)
+    issued_month_id = random.randint(1, 12)
+    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if issued_month_id == 2 and (issued_year % 4 == 0 and (issued_year % 100 != 0 or issued_year % 400 == 0)):
+        days_in_feb = 29
+    else:
+        days_in_feb = 28
+    days_in_month[1] = days_in_feb
+    issued_day = random.randint(1, days_in_month[issued_month_id - 1])
+    return issued_year, issued_month_id, issued_day
+year_id, month_id, day_id = id_issued()
 
 def generate_random_person():
     USA_first_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
@@ -602,26 +625,26 @@ def generate_random_person():
     return {
         print("IDENTIFICATION CARD".center(80, '-')),
         print(""),
-        print("%-2s %-30s" % ("4d", f"LIC No. {random.randint(1000,9990)}-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}")),
-        print("%-2s %-30s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})")),
-        print("%-2s %-30s %-120s" % ("4b", f"EXP: STILL NEED TO BE PROGRAMMED", "4a ISS: 05/02/2005")),
-        print("%-2s %-30s" % ("1", f"Name: {USA_first_name}")),
-        print("%-2s %-30s" % ("2", f"Surname: {USA_last_name}")),
-        print("%-2s %-30s" % ("8", f"Address: still need to be programmed")),
-        print("%-2s %-30s" % (" ", "City, State, ZIP Code")),
+        print("%-3s %-50s" % ("4d", f"LIC No. {random.randint(1000,9990)}-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}")),
+        print("%-3s %-50s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})")),
+        print("%-3s %-50s %-4s %-120s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}")),
+        print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
+        print("%-3s %-50s" % ("2", f"Surname: {USA_last_name}")),
+        print("%-3s %-50s" % ("8", f"Address: still need to be programmed")),
+        print("%-3s %-50s" % (" ", "City, State, ZIP Code")),
         print(f" "),
-        print("%-2s %-30s %-50s" % ("15", f"SEX: {gender}", f"16 HGT: STILL NEED TO BE PROGRAMMED")),
-        print("%-2s %-30s %-50s" % ("17", f"WGT: {random.randint(132, 197)}lbs", f"18 EYES: {get_random_item(eyes_color)}")),
+        print("%-3s %-50s %-4s %-120s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"')),
+        print("%-3s %-50s %-4s %-120s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}")),
         print(" "),
         print(" "),
         print("MORE ABOUT YOU:".center(80, '-')),
-        print("%-2s %-30s %-4s %-120s" % ("3b", f"Birthplace: {get_random_item(cities)}, USA", "3c", f"Zodiac Sign: {get_random_item(USA_zodiac)}")),
-        print("%-2s %-30s %-4s %-120s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
-        print("%-2s %-30s %-4s %-120s" % ("3d", f"Hair color: {get_random_item(USA_colors)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
-        print("%-2s %-30s %-4s %-120s" % ("3f", f"Blood type: {get_random_item(blood_type)}", "3g", f"Religion: {get_random_item(religion)}")),
-        print("%-2s %-30s %-4s %-120s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(USA_foods)}")),
-        print("%-2s %-30s %-4s %-120s" % ("21c", f"Favorite color: {get_random_item(USA_colors)}", "21d", f"Favorite season: {get_random_item(USA_seasons)}")), 
-        print("%-2s %-30s %-4s %-120s" % ("21e", f"Favorite animal: {get_random_item(USA_animals)}", "21f", f"Lucky number: {random.randint(0, 99)}")),
+        print("%-3s %-50s %-4s %-120s" % ("3b", f"Birthplace: {get_random_item(USA_cities)}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
+        print("%-3s %-50s %-4s %-120s" % ("3d", f"Hair color: {get_random_item(hairs_color)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
+        print("%-3s %-50s %-4s %-120s" % ("3f", f"Blood type: {get_random_item(blood_types)}", "3g", f"Religion: {get_random_item(religions)}")),
+        print("%-3s %-50s %-4s %-120s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
+        print("%-3s %-50s %-4s %-120s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(foods)}")),
+        print("%-3s %-50s %-4s %-120s" % ("21c", f"Favorite color: {get_random_item(colors)}", "21d", f"Favorite season: {get_random_item(seasons)}")), 
+        print("%-3s %-50s %-4s %-120s" % ("21e", f"Favorite animal: {get_random_item(animals)}", "21f", f"Lucky number: {random.randint(0, 99)}")),
         print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
     }
 
