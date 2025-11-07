@@ -2,8 +2,6 @@ import random
 from datetime import datetime, timedelta
 import string
 
-#================================USA========================================#
-##==========================PERSONAL INFORMATION======================##
 USA_first_names_male = [
     "Liam", "Noah", "Oliver", "Theodore", "James", "Henry", "Mateo", "Elijah", 
     "Lucas", "William", "Benjamin", "Levi", "Ezra", "Sebastian", "Jack", 
@@ -439,254 +437,135 @@ USA_last_names = [
     "Daugherty", "Travis", "Tang"
 ]
 
-USA_zodiac = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 
+zodiac_sign = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 
     'Capricorn', 'Aquarius', 'Pisces']
 
-USA_religion = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
+religions = ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism', 'Sikhism', 'Bahá\'í Faith', 'Shinto',
     'Confucianism', 'Jainism', 'Taoism', 'Zoroastrianism', 'Paganism', 'Unitarian Universalism', 'Wicca']
 
-##==========================PHYSICAL APPEARANCE======================================##
-USA_colors = [
-    "red", "blue", "green", "yellow", "orange", "purple", "pink", "brown",
-    "black", "white", "gray", "grey", "cyan", "magenta", "lime", "navy",
-    "maroon", "olive", "teal", "silver", "gold", "violet",
-    "crimson", "scarlet", "ruby", "cherry", "rose", "coral", "tomato",
-    "brick", "burgundy", "wine", "mahogany", "rust", "vermilion", "rouge",
-    "azure", "cerulean", "cobalt", "sapphire", "indigo", "navy", "sky",
-    "steel", "turquoise", "aqua", "aquamarine", "royal", "midnight",
-    "powder", "baby", "periwinkle", "denim", "slate",
-    "emerald", "jade", "mint", "forest", "lime", "olive", "sea", "pine",
-    "teal", "jungle", "sage", "hunter", "viridian", "chartreuse", "kelly",
-    "shamrock", "malachite", "verdant",
-    "gold", "amber", "ivory", "beige", "cream", "blonde", "champagne",
-    "lemon", "mustard", "saffron", "sunflower", "daffodil", "butter",
-    "corn", "honey", "goldenrod", "tangerine",
-    "coral", "peach", "salmon", "apricot", "copper", "bronze", "rust",
-    "burnt", "sienna", "pumpkin", "carrot", "ginger", "cinnamon",
-    "violet", "lavender", "mauve", "magenta", "fuchsia", "plum", "orchid",
-    "lilac", "periwinkle", "amethyst", "eggplant", "indigo", "heliotrope",
-    "mulberry", "prune", "slate",
-    "rose", "magenta", "fuchsia", "hot", "salmon", "coral", "blush",
-    "carnation", "flamingo", "raspberry", "strawberry", "bubblegum",
-    "cotton", "powder", "baby", "cherry",
-    "brown", "tan", "beige", "khaki", "taupe", "camel", "sand", "bronze",
-    "copper", "chocolate", "cocoa", "coffee", "sepia", "umber", "oak",
-    "walnut", "pecan", "hazel", "almond",
-    "black", "white", "gray", "grey", "silver", "charcoal", "ash", "smoke",
-    "steel", "iron", "lead", "slate", "storm", "twilight", "jet", "onyx",
-    "obsidian", "ebony", "ink",
-    "gold", "silver", "bronze", "copper", "brass", "platinum", "steel",
-    "chrome", "aluminum", "mercury", "iron", "lead", "zinc", "tin",
-    "pastel", "powder", "misty", "soft", "washed", "pale", "light",
-    "turquoise", "peacock", "peach", "apricot", "melon", "cantaloupe",
-    "watermelon", "raspberry", "crimson", "cardinal", "blood", "wine",
-    "burgundy", "claret", "maroon", "scarlet", "vermilion", "terracotta",
-    "ochre", "sienna", "umber", "sepia", "turmeric", "saffron", "paprika"
+colors = [
+    'Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple', 'Pink', 'Brown',
+    'Black', 'White', 'Gray', 'Silver', 'Gold',
+    'Crimson', 'Scarlet', 'Ruby', 'Cherry', 'Rose', 'Coral', 'Salmon',
+    'Tomato', 'Maroon', 'Burgundy', 'Wine', 'Mahogany', 'Rust', 'Vermilion',
+    'Navy', 'Royalblue', 'Azure', 'Cerulean', 'Cobalt', 'Sapphire',
+    'Indigo', 'Skyblue', 'Turquoise', 'Qqua', 'Qquamarine', 'Teal',
+    'Powderblue', 'Midnightblue', 'Steelblue', 'Slateblue',
+    'Lime', 'Emerald', 'Jade', 'Mint', 'Forestgreen', 'Olive',
+    'Seagreen', 'Limegreen', 'Chartreuse', 'Kellygreen', 'Shamrock',
+    'Gold', 'Amber', 'Lemon', 'Mustard', 'Saffron', 'Sunflower',
+    'Tangerine', 'Peach', 'Apricot', 'Pumpkin', 'Carrot', 'Ginger',
+    'Violet', 'Lavender', 'Mauve', 'Magenta', 'Fuchsia', 'Plum',
+    'Orchid', 'Lilac', 'Periwinkle', 'Amethyst', 'Eggplant',
+    'Hotpink', 'Blush', 'Carnation', 'Flamingo', 'Raspberry',
+    'Strawberry', 'Bubblegum', 'Cottoncandy',
+    'Chocolate', 'Cocoa', 'Coffee', 'Tan', 'Beige', 'Khaki', 'Taupe',
+    'Camel', 'Sand', 'Sienna', 'Cinnamon', 'Bronze', 'Copper', 'Sepia',
+    'Charcoal', 'Ash', 'Slate', 'Ivory', 'Cream', 'Linen',
+    'Cyan', 'Peacock', 'Watermelon', 'Terracotta', 'Ochre', 'Paprika'
 ]
 
-USA_animals = [
-    "dog", "cat", "elephant", "lion", "tiger", "bear", "wolf", "fox",
-    "deer", "rabbit", "squirrel", "mouse", "rat", "horse", "cow", "pig",
-    "sheep", "goat", "monkey", "gorilla", "chimp", "kangaroo", "koala",
-    "panda", "whale", "dolphin", "seal", "walrus", "bat", "human",
-    "eagle", "hawk", "owl", "parrot", "eagle", "robin", "sparrow",
-    "penguin", "ostrich", "emu", "pelican", "flamingo", "swan", "duck",
-    "goose", "chicken", "turkey", "peacock", "dove", "crow", "raven",
-    "salmon", "tuna", "shark", "goldfish", "clownfish", "eel", "trout",
-    "bass", "pike", "mackerel", "cod", "herring", "sardine", "anchovy",
-    "snake", "lizard", "turtle", "tortoise", "crocodile", "alligator",
-    "iguana", "gecko", "chameleon", "python", "cobra", "rattlesnake",
-    "frog", "toad", "salamander", "newt", "axolotl",
-    "ant", "bee", "butterfly", "moth", "fly", "mosquito", "dragonfly",
-    "grasshopper", "cricket", "spider", "scorpion", "centipede", "millipede",
-    "beetle", "ladybug", "firefly", "wasp", "hornet", "termite",
-    "octopus", "squid", "jellyfish", "starfish", "sea urchin", "coral",
-    "crab", "lobster", "shrimp", "ray", "seahorse", "hippo",
-    "platypus", "echidna", "sloth", "armadillo", "anteater", "lemur",
-    "zebra", "giraffe", "hippopotamus", "rhinoceros", "cheetah", "leopard"
+animals = [
+    "Dog", "Cat", "Elephant", "Lion", "Tiger", "Bear", "Wolf", "Fox",
+    "Deer", "Rabbit", "Squirrel", "Mouse", "Rat", "Horse", "Cow", "Pig",
+    "Sheep", "Goat", "Monkey", "Gorilla", "Chimpanzee", "Kangaroo", "Koala",
+    "Panda", "Whale", "Dolphin", "Seal", "Walrus", "Bat",
+    "Hippopotamus", "Rhinoceros", "Giraffe", "Zebra", "Cheetah", "Leopard",
+    "Sloth", "Armadillo", "Anteater", "Lemur", "Platypus", "Echidna",
+    "Eagle", "Hawk", "Owl", "Parrot", "Robin", "Sparrow", "Penguin",
+    "Ostrich", "Emu", "Pelican", "Flamingo", "Swan", "Duck", "Goose",
+    "Chicken", "Turkey", "Peacock", "Dove", "Crow", "Raven",
+    "Salmon", "Tuna", "Shark", "Goldfish", "Clownfish", "Eel", "Trout",
+    "Bass", "Pike", "Mackerel", "Cod", "Herring", "Sardine", "Anchovy",
+    "Snake", "Lizard", "Turtle", "Tortoise", "Crocodile", "Alligator",
+    "Iguana", "Gecko", "Chameleon", "Python", "Cobra", "Rattlesnake",
+    "Frog", "Toad", "Salamander", "Newt", "Axolotl",
+    "Ant", "Bee", "Butterfly", "Moth", "Fly", "Mosquito", "Dragonfly",
+    "Grasshopper", "Cricket", "Spider", "Scorpion", "Centipede", "Millipede",
+    "Beetle", "Ladybug", "Firefly", "Wasp", "Hornet", "Termite",
+    "Octopus", "Squid", "Jellyfish", "Starfish", "Sea Urchin",
+    "Crab", "Lobster", "Shrimp", "Seahorse", "Ray"
 ]
 
-USA_seasons = ['Spring', 'Summer', 'Autumn', 'Fall', 'Winter']
+seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 
-USA_foods = [
-    "pizza", "pasta", "lasagna", "spaghetti", "ravioli", "risotto", "gelato",
-    "hamburger", "cheeseburger", "hot dog", "fried chicken", "steak", 
-    "fried fish", "mac and cheese", "bbq ribs", "apple pie", "chocolate chip cookies",
-    "sushi", "ramen", "fried rice", "chow mein", "pad thai", "kimchi", 
-    "bulgogi", "curry", "dumplings", "spring rolls",
-    "tacos", "burritos", "quesadillas", "enchiladas", "tamales", 
-    "nachos", "guacamole", "salsa",
-    "pancakes", "waffles", "french toast", "scrambled eggs", "bacon", 
-    "sausage", "cereal", "oatmeal", "yogurt", "granola",
-    "chocolate", "ice cream", "cake", "brownies", "cookies", "chips",
-    "popcorn", "nuts", "fruit", "cheese", "bread", "sandwich",
-    "soup", "stew", "potatoes", "fried potatoes", "pizza", "pasta",
-    "chicken soup", "grilled cheese", "cornbread",
-    "falafel", "hummus", "shawarma", "kebab", "paella", "crepes", 
-    "croissants", "scones", "bagels", "dim sum",
-    "salmon", "tuna", "shrimp", "lobster", "crab", "scallops",
-    "salad", "vegetable stir fry", "quinoa bowl", "avocado toast",
-    "hummus", "veggie burger"
+foods = [
+    "Pizza", "Pasta", "Lasagna", "Spaghetti", "Ravioli", "Risotto", "Gelato",
+    "Hamburger", "Cheeseburger", "Hot Dog", "Fried Chicken", "Steak",
+    "Mac and Cheese", "BBQ Ribs", "Apple Pie", "Chocolate Chip Cookies",
+    "Grilled Cheese", "Cornbread", "Fried Fish",
+    "Sushi", "Ramen", "Fried Rice", "Chow Mein", "Pad Thai", "Kimchi",
+    "Bulgogi", "Curry", "Dumplings", "Spring Rolls", "Dim Sum",
+    "Tacos", "Burrito", "Quesadilla", "Enchilada", "Tamale",
+    "Nachos", "Guacamole", "Salsa",
+    "Pancakes", "Waffles", "French Toast", "Scrambled Eggs", "Bacon",
+    "Sausage", "Oatmeal", "Yogurt", "Granola", "Bagel", "Croissant", "Scone",
+    "Chocolate", "Ice Cream", "Cake", "Brownie", "Cookie", "Popcorn",
+    "Potato Chips", "Peanuts", "Almonds",
+    "Falafel", "Hummus", "Shawarma", "Kebab", "Paella", "Crepe",
+    "Salmon", "Tuna", "Shrimp", "Lobster", "Crab", "Scallops",
+    "Salad", "Quinoa Bowl", "Avocado Toast", "Veggie Burger",
+    "Mashed Potatoes", "French Fries", "Chicken Soup", "Bread", "Cheese"
 ]
 
 USA_political_side = [
-    "Democratic Party", "Republican Party", "Libertarian Party",
-    "Green Party", "Constitution Party", "Working Families Party",
-    "Socialist Party", "Progressive Party", "Liberal", "Conservative",
-    "Moderate", "Progressive", "Libertarian", "Socialist",
-    "Democratic Socialist", "Populist", "Centrist",
-    "Neoliberal", "Neoconservative", "Classical Liberal",
+    # Major Active Political Parties
+    "Democratic Party", "Republican Party", "Libertarian Party", "Green Party",
+    "Constitution Party", "Working Families Party", "Socialist Party USA", "Peace and Freedom Party",
+    "Reform Party", "Liberal", "Conservative", "Moderate",
+    "Progressive", "Libertarian", "Socialist", "Populist", "Centrist",
+    "Democratic Socialist", "Neoliberal", "Neoconservative", "Classical Liberal",
     "Social Liberal", "Fiscal Conservative", "Social Conservative", "Paleoconservative",
-    "Reactionary", "Anarchist", "Communist", "Capitalist", "Federalist", "Anti-Federalist",
-    "Whig", "Jacksonian Democrat", "Populist", "Progressive Era", "New Deal Democrat",
-    "Reagan Republican", "Tea Party", "Occupy Movement", "Alt-Right", "Alt-Left",
-    "Left-Wing", "Right-Wing", "Far-Left", "Far-Right", "Center-Left", "Center-Right",
-    "Establishment", "Anti-Establishment"
+    "Left-Wing", "Right-Wing", "Center-Left", "Center-Right",
+    "Far-Left", "Far-Right", "Establishment", "Anti-Establishment",
+    "Tea Party Movement", "Democratic Socialists of America (DSA)", "MAGA Republicans", "Never Trump Republicans",
+    "Blue Dog Democrats", "Progressive Caucus"
 ]
 
 email_providers = [
-    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com', 'protonmail.com',
-    'zoho.com', 'mail.com', 'yandex.com', 'gmx.com', 'comcast.net', 'me.com', 'msn.com', 'mail.ru', 
-    'live.com', 'rocketmail.com', 'fastmail.com', 'tutanota.com', 'hushmail.com', 'inbox.com', 
-    'rediffmail.com', 'yahoo.co.uk', 'gmx.de', 'virmail.com', 'bluebottle.com', 'mailchimp.com', 
-    'mac.com', 'seznam.cz', 'gawab.com', 'lycos.com', 'cableone.net', 'shaw.ca', 'virginmedia.com',
-    'sbcglobal.net', 'att.net', 'earthlink.net', 'juno.com', 'netzero.net', 'optimum.net', 'bell.net',
-    'cox.net', 'charter.net', 'fuse.net', 'epix.net', 'frontier.com', 'rcn.com', 'windstream.net',
-    'mailinator.com', 'temp-mail.org', 'guerrillamail.com', '10minutemail.com', 'yopmail.com', 
-    'dispostable.com', 'trashmail.com', 'spambox.us', 'spamex.com', 'maildrop.cc', 'throwawaymail.com',
-    'spamgourmet.com', 'mailcatch.com', 'getnada.com', 'tempinbox.com', 'dodgit.com', 'fakeinbox.com',
-    'mailnesia.com', 'inbox.lv', 'simplicmail.com', 'zapto.org', 'myself.com', 'tutanota.de', 'mailfence.com'
-]
-
-
-USA_car = [
-    "Toyota Camry", "Honda Civic", "Ford F-150", "Chevrolet Silverado", "Nissan Altima",
-    "Hyundai Elantra", "Kia Soul", "Subaru Outback", "Mazda CX-5", "Volkswagen Jetta",
-    "BMW 3 Series", "Mercedes C-Class", "Audi A4", "Lexus ES", "Infiniti Q50",
-    "Acura TLX", "Cadillac CT5", "Genesis G80", "Tesla Model 3", "Tesla Model S",
-    "Tesla Model X", "Tesla Model Y", "Ford Mustang", "Chevrolet Corvette", "Dodge Challenger",
-    "Ford Explorer", "Chevrolet Equinox", "Jeep Grand Cherokee", "Toyota RAV4", "Honda CR-V",
-    "Subaru Forester", "Mazda CX-9", "Volkswagen Tiguan", "Nissan Rogue", "Hyundai Santa Fe",
-    "Kia Sorento", "Ford Escape", "Chevrolet Traverse", "Jeep Wrangler", "Toyota 4Runner",
-    "Honda Pilot", "GMC Yukon", "Chevrolet Tahoe", "Ford Expedition", "Lincoln Navigator",
-    "BMW X3", "Mercedes GLC", "Audi Q5", "Lexus RX", "Infiniti QX60", "Acura MDX",
-    "Cadillac Escalade", "Lincoln Aviator", "Volvo XC90", "Volvo XC60", "Porsche Macan",
-    "Porsche Cayenne", "Land Rover Range Rover", "Land Rover Discovery", "Jaguar F-Pace",
-    "Alfa Romeo Giulia", "Maserati Ghibli", "Lamborghini Huracan", "Ferrari 488", "McLaren 720S",
-    "Aston Martin DB11", "Bentley Continental", "Rolls-Royce Phantom", "Maybach S-Class",
-    "BMW 5 Series", "Mercedes E-Class", "Audi A6", "Lexus GS", "Infiniti Q70", "Acura RLX",
-    "Cadillac CT6", "Genesis G90", "BMW 7 Series", "Mercedes S-Class", "Audi A8", "Lexus LS",
-    "Toyota Prius", "Honda Insight", "Hyundai Ioniq", "Kia Niro", "Chevrolet Bolt", "Nissan Leaf",
-    "BMW i3", "Volkswagen ID.4", "Ford Focus", "Mazda3", "Nissan Sentra", "Hyundai Accent",
-    "Kia Rio", "Chevrolet Malibu", "Ford Fusion", "Dodge Charger", "Subaru Impreza",
-    "Volkswagen Golf", "Mini Cooper", "Fiat 500", "Smart Fortwo", "Mazda MX-5 Miata",
-    "Chevrolet Camaro", "Ford GT", "Dodge Viper", "Chevrolet Silverado HD", "Ford Super Duty",
-    "Ram 1500", "GMC Sierra", "Chevrolet Colorado", "Ford Ranger", "Toyota Tacoma",
-    "Nissan Titan", "Honda Accord", "Toyota Corolla", "Nissan Maxima", "Hyundai Sonata",
-    "Kia Optima", "Subaru Legacy", "Mazda6", "Volkswagen Passat", "Ford Taurus",
-    "Buick LaCrosse", "Chrysler 300", "Dodge Magnum", "Pontiac Grand Prix", "Oldsmobile Intrigue",
-    "Saturn Aura", "Suzuki Swift", "Mitsubishi Lancer", "Eagle Talon", "Plymouth Neon",
-    "Mercury Sable", "Lincoln Continental", "Cadillac DeVille", "Buick Century", "Oldsmobile Cutlass",
-    "Pontiac Grand Am", "Chevrolet Lumina", "Ford Crown Victoria", "Mercury Grand Marquis",
-    "Dodge Intrepid", "Chrysler Concorde", "Eagle Vision", "Plymouth Acclaim", "Dodge Stealth",
-    "Acura Legend", "Infiniti J30", "Nissan 300ZX", "Mazda RX-7", "Mitsubishi 3000GT",
-    "Toyota Supra", "Nissan 240SX", "Honda Prelude", "Acura Integra", "Mazda MX-6",
-    "Ford Probe", "Chevrolet Beretta", "Pontiac Firebird", "Toyota Celica", "Mazda 626",
-    "Subaru SVX", "Volkswagen Corrado", "Ford Bronco", "Chevrolet Blazer", "Isuzu Trooper",
-    "Mazda Navajo", "Plymouth Voyager", "Dodge Caravan", "Chrysler Town & Country", "Pontiac Trans Sport",
-    "Mercury Villager", "Nissan Quest", "Toyota Previa", "Honda Odyssey", "Mitsubishi Expo",
-    "Suzuki Sidekick", "Geo Tracker", "Isuzu Amigo", "Mazda B-Series", "Ford Aerostar",
-    "Chevrolet Astro", "GMC Safari", "Nissan Vanette", "Toyota Van", "Chrysler Voyager",
-    "Dodge Ram Van", "Ford E-Series", "Chevrolet Express", "GMC Savana", "Mercedes Sprinter",
-    "Fiat Ducato", "Renault Master", "Peugeot Boxer", "Citroën Jumper", "Volkswagen Crafter",
-    "Ford Transit", "Mercedes Vito", "Volkswagen Transporter", "Fiat Scudo", "Opel Vivaro",
-    "BMW X5", "Mercedes GLE", "Audi Q7", "Lexus GX", "Infiniti QX80", "Acura RDX",
-    "Cadillac XT5", "Lincoln MKX", "Volvo V90", "Volvo V60", "Porsche Panamera",
-    "Porsche 911", "Ferrari F8", "Lamborghini Aventador", "Maserati Levante", "Aston Martin DBX",
-    "Bentley Bentayga", "Rolls-Royce Cullinan", "Maybach GLS", "BMW X7", "Mercedes GLS",
-    "Audi Q8", "Lexus LX", "Toyota Sequoia", "Nissan Armada", "Subaru Ascent",
-    "Honda HR-V", "Kia Sportage", "Hyundai Kona", "Mazda CX-3", "Volkswagen Atlas",
-    "Ford Edge", "Chevrolet Trax", "Buick Encore", "Cadillac XT4", "Lincoln Corsair",
-    "Volvo S90", "Volvo S60", "Alfa Romeo Stelvio", "Fiat 500X", "Jeep Compass",
-    "Mitsubishi Outlander", "Suzuki Equator", "Isuzu Ascender", "Saab 9-3", "Opel Astra",
-    "Holden Commodore", "HSV Maloo", "Lotus Elise", "TVR Sagaris", "Morgan Plus 8",
-    "Caterham 7", "Noble M600", "RUF CTR", "Spyker C8", "Koenigsegg Agera",
-    "Pagani Huayra", "Bugatti Chiron", "Rimac Concept", "Tesla Roadster", "Polestar 2",
-    "Lucid Air", "Rivian R1T", "Ford Mustang Mach-E", "Chevrolet Silverado EV", "GMC Hummer EV",
-    "Nissan Ariya", "Hyundai Ioniq 5", "Kia EV6", "BMW iX", "Mercedes EQS",
-    "Audi e-tron", "Porsche Taycan", "Genesis GV60", "Volvo C40", "Subaru Solterra",
-    "Toyota bZ4X", "Honda Prologue", "Cadillac Lyriq", "Lincoln Star", "Mercedes EQE",
-    "BMW i4", "Audi Q4 e-tron", "Volkswagen ID. Buzz", "Fiat 500e", "Mini Cooper SE",
-    "Hyundai Ioniq 6", "Genesis Electrified GV70", "BMW X1", "Mercedes GLB", "Audi Q3",
-    "Lexus UX", "Infiniti QX50", "Acura ILX", "Cadillac ATS", "Lincoln MKZ",
-    "Volvo S80", "Alfa Romeo 4C", "Fiat 124 Spider", "Mazda MX-30", "Subaru BRZ",
-    "Toyota GR86", "Chevrolet Corvette Stingray", "Ford Shelby GT500", "Dodge Durango",
-    "Jeep Gladiator", "Toyota Land Cruiser", "Nissan Patrol", "Mercedes G-Class",
-    "Land Rover Defender", "Porsche 911 Turbo", "Ferrari Roma", "Lamborghini Urus",
-    "Maserati Quattroporte", "Aston Martin Vantage", "Bentley Flying Spur",
-    "Rolls-Royce Ghost", "Maybach S650", "BMW M3", "Mercedes AMG GT", "Audi RS6",
-    "Lexus RC F", "Infiniti Q60 Red Sport", "Acura NSX", "Cadillac CTS-V", "Lincoln Continental",
-    "Volvo XC40", "Alfa Romeo Giulietta", "Fiat Panda", "Jeep Renegade", "Mitsubishi Eclipse Cross",
-    "Suzuki Vitara", "Isuzu D-Max", "MG ZS", "Lynk & Co 01", "Geely Preface",
-    "Proton X70", "Perodua Axia", "Tata Nexon", "Mahindra XUV500", "Kia Stinger",
-    "Genesis GV80", "Volvo P1800", "Saab 900", "Opel Kadett", "Holden Monaro",
-    "HSV GTS", "Lotus Elan", "TVR Griffith", "Morgan Roadster", "Caterham Super Seven",
-    "Noble M400", "RUF Rt 12", "Spyker D8", "Koenigsegg CCXR", "Pagani Zonda",
-    "Bugatti Veyron", "Rimac Nevera", "Tesla Cybertruck", "Polestar 3", "Lucid Gravity",
-    "Rivian R1S", "Ford Lightning", "Chevrolet Equinox EV", "GMC Sierra EV", "Nissan Ariya EV",
-    "Hyundai Ioniq 7", "Kia EV9", "BMW Neue Klasse", "Mercedes EQB", "Audi A5 Sportback"
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
+    'live.com', 'icloud.com', 'me.com', 'mac.com', 'protonmail.com',
+    'tutanota.com', 'tutanota.de', 'mailfence.com', 'hushmail.com', 'fastmail.com', 'zoho.com',
+    'gmx.com', 'gmx.de', 'mail.com', 'inbox.com', 'yandex.com', 'mail.ru', 'aol.com',
+    'comcast.net', 'sbcglobal.net', 'att.net', 'cox.net', 'earthlink.net', 'rediffmail.com',
+    'seznam.cz', 'yahoo.co.uk', 'rocketmail.com'
 ]
 
 eyes_color = [
     "Brown", "Amber", "Hazel", "Green", "Blue", "Gray"
 ]
-###########################################################################################################################################################################
 
-street_names = [
-    'Main Street', 'First Street', 'Second Street', 'Third Street', 'Elm Street', 'Oak Street', 'Pine Street',
-    'Maple Street', 'Washington Street', 'Broadway', 'High Street', 'Park Avenue', 'King Street', 'Church Street',
-    'Cedar Street', 'River Road', 'Lake Road', 'Sunset Boulevard', 'North Avenue', 'South Avenue', 'East Road',
-    'West Road', 'Hill Street', 'Monroe Street', 'Jefferson Street', 'Franklin Street', 'Adams Street', 'Lincoln Street',
-    'State Street', 'Victory Road', 'Rose Street', 'Baker Street', 'Pleasant Street', 'Green Street', 'Spring Street',
-    'Woods Road', 'Sunnyvale Road', 'Cottonwood Drive', 'Independence Avenue', 'Heritage Way', 'Hilltop Drive',
-    'Ridge Road', 'Country Road', 'Sunshine Street', 'Silver Avenue', 'Golden Drive', 'Main Avenue', 'Kingston Road',
-    'Broadway Avenue', 'Peachtree Street', 'Lakeside Drive', 'Shady Lane', 'Oakwood Drive', 'Rainbow Boulevard',
-    'Cherry Blossom Drive', 'Cypress Street', 'Sunset Drive', 'Sierra Avenue', 'Mountain View Road', 'Water Street',
-    'Pinehurst Drive', 'Clearview Street', 'Bluebell Road', 'Hawthorne Avenue', 'Riverfront Road', 'Wellington Drive',
-    'Summit Street', 'Miller Road', 'Maple Avenue', 'Redwood Street', 'Tanglewood Drive', 'Linden Street', 'Ash Street',
-    'Briargate Road', 'New Hope Road', 'Parkwood Drive', 'Thornhill Street', 'Windsor Road', 'Chestnut Street',
-    'Hickory Lane', 'Crescent Avenue', 'Valley Road', 'Sunrise Boulevard', 'Silver Oak Drive', 'Rolling Hills Road',
-    'Riverstone Lane', 'Belfast Road', 'Bristol Drive', 'Cottonwood Avenue', 'Chestnut Avenue', 'Glenwood Road',
-    'Silver Creek Drive', 'Eagle Street', 'Springdale Road', 'Copperstone Drive', 'Mountain View Drive', 'Beach Street']
+hairs_color = [
+    "Black", "Brown", "Auburn", "Red", "Blonde", "Gray", "White"
+]
 
-cities = [
-    'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 
-    'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'San Francisco',
-    'Charlotte', 'Indianapolis', 'Seattle', 'Denver', 'Washington D.C.', 'Boston', 'El Paso', 
-    'Detroit', 'Nashville', 'Portland', 'Memphis', 'Oklahoma City', 'Las Vegas', 'Louisville', 
-    'Baltimore', 'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Mesa', 'Sacramento', 'Kansas City', 
-    'Long Beach', 'Atlanta', 'Colorado Springs', 'Raleigh', 'Miami', 'Omaha', 'Oakland', 'Minneapolis',
-    'Tulsa', 'Wichita', 'Arlington', 'New Orleans', 'Cleveland', 'Bakersfield', 'Tampa', 'Henderson', 
-    'Aurora', 'Honolulu', 'Anaheim', 'Santa Ana', 'Riverside', 'Corpus Christi', 'Lexington', 'St. Louis', 
-    'Stockton', 'Pittsburgh', 'St. Paul', 'Cincinnati', 'Anchorage', 'Greensboro', 'Plano', 'Newark', 
-    'Lincoln', 'Orlando', 'Irvine', 'Toledo', 'Jersey City', 'Chula Vista', 'Durham', 'Fort Wayne', 
-    'Buffalo', 'Madison', 'Lubbock', 'Chandler', 'Glendale', 'Reno', 'Norfolk', 'Winston-Salem', 'Gilbert', 
-    'Hialeah', 'Arlington', 'Huntington Beach', 'Montgomery', 'Boise', 'Richmond', 'Des Moines', 
-    'Spokane', 'Tacoma', 'San Bernardino', 'Modesto', 'Fontana', 'Santa Clarita', 'Birmingham', 
-    'Oxnard', 'Fayetteville', 'Moreno Valley', 'Shreveport', 'Aurora', 'Yonkers', 'Columbia', 'Lakewood',
-    'Cape Coral', 'Peoria', 'Jackson', 'Naperville', 'Escondido', 'Fullerton', 'McKinney', 'Killeen', 
-    'Bellevue', 'Rockford', 'McAllen', 'Costa Mesa', 'Inglewood', 'Manchester', 'Waterbury', 'Charleston',
-    'West Valley City', 'Lewisville', 'Huntington', 'Gresham', 'Fargo', 'Glendale', 'South Bend', 'Edmond',
-    'Columbus', 'Round Rock', 'Nampa', 'Shreveport', 'Lafayette', 'Baton Rouge', 'Tallahassee', 
-    'Tempe', 'Chattanooga', 'Syracuse', 'Albany', 'Denton', 'Allentown', 'Lansing', 'Evansville', 'Toledo', 
-    'Pueblo', 'Chico', 'Bend', 'Springfield', 'Cedar Rapids', 'Tallahassee', 'Lincoln', 'Overland Park']
-states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+USA_cities = [
+    "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
+    "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
+    "Austin", "Jacksonville", "Fort Worth", "Columbus", "Indianapolis",
+    "Charlotte", "San Francisco", "Seattle", "Denver", "Washington",
+    "Nashville", "Oklahoma City", "El Paso", "Boston", "Portland",
+    "Las Vegas", "Detroit", "Louisville", "Memphis", "Baltimore",
+    "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Mesa",
+    "Sacramento", "Atlanta", "Kansas City", "Colorado Springs", "Raleigh",
+    "Miami", "Omaha", "Long Beach", "Virginia Beach", "Oakland",
+    "Minneapolis", "Tampa", "Tulsa", "Arlington", "New Orleans",
+    "Wichita", "Bakersfield", "Cleveland", "Aurora", "Anaheim",
+    "Honolulu", "Santa Ana", "Riverside", "Corpus Christi", "Lexington",
+    "Stockton", "Henderson", "St. Paul", "Cincinnati", "Pittsburgh",
+    "Greensboro", "Anchorage", "Plano", "Lincoln", "Orlando",
+    "Irvine", "Newark", "Durham", "Chula Vista", "Toledo",
+    "Fort Wayne", "St. Petersburg", "Laredo", "Jersey City", "Madison",
+    "Chandler", "Lubbock", "Scottsdale", "Reno", "Buffalo",
+    "Gilbert", "Glendale", "North Las Vegas", "Winston-Salem", "Chesapeake",
+    "Norfolk", "Fremont", "Garland", "Irving", "Hialeah"
+]
 
 
 def generate_random_birthday():
     today = datetime.today()
     age_range_start = 18
-    age_range_end = 80
+    age_range_end = 50
     age = random.randint(age_range_start, age_range_end)
     birth_year = today.year - age
     random_month = random.randint(1, 12)
@@ -701,7 +580,8 @@ def get_random_item(item_list):
     return random.choice(item_list)
 
 def get_two_random_item(item2_list, item3_list):
-    return random.choice(item2_list)
+    chosen_list = random.choice([item2_list, item3_list])
+    return random.choice(chosen_list)
 
 def generate_driver_license():
     state = random.choice(states)
@@ -723,7 +603,7 @@ def generate_random_person():
     return {
         print("IDENTIFICATION CARD".center(80, '-')),
         print(""),
-        print("%-2s %-30s" % ("4d", f"LIC NO. ({random.randint(1000,9990)})-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}")),
+        print("%-2s %-30s" % ("4d", f"LIC No. {random.randint(1000,9990)}-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}")),
         print("%-2s %-30s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})")),
         print("%-2s %-30s %-120s" % ("4b", f"EXP: STILL NEED TO BE PROGRAMMED", "4a ISS: 05/02/2005")),
         print("%-2s %-30s" % ("1", f"Name: {USA_first_name}")),
@@ -736,14 +616,13 @@ def generate_random_person():
         print(" "),
         print(" "),
         print("MORE ABOUT YOU:".center(80, '-')),
-        print("%-2s %-30s %-120s" % ("20", f"Birthplace: {get_random_item(cities)}, USA", f"21 Zodiac Sign: {get_random_item(USA_zodiac)}")),
-        print("%-2s %-30s %-120s" % ("22", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", f"23 Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
-        print("%-2s %-30s %-120s" % ("24", f"Driver license: {random_license}", f"25 Car: {get_random_item(USA_car)}")),
-        print("%-2s %-30s %-120s" % ("26", f"Hair color: {get_random_item(USA_colors)}", f"27 Shoe size: {random.randint(5, 20)}")),
-        #print("%-2s %-30s %-80s" % ("28", f"Blood type: {get_random_item(blood_type)}", f"29 Religion: {get_random_item(religion)}")),
-        print("%-2s %-30s %-120s" % ("30", f"Political side: {get_random_item(USA_political_side)}", f"31 Favorite food: {get_random_item(USA_foods)}")),
-        print("%-2s %-30s %-120s" % ("32", f"Favorite color: {get_random_item(USA_colors)}", f"33 Favorite season: {get_random_item(USA_seasons)}")), 
-        print("%-2s %-30s %-120s" % ("34", f"Favorite animal: {get_random_item(USA_animals)}", f"35 Lucky number: {random.randint(0, 99)}")),
+        print("%-2s %-30s %-4s %-120s" % ("3b", f"Birthplace: {get_random_item(cities)}, USA", "3c", f"Zodiac Sign: {get_random_item(USA_zodiac)}")),
+        print("%-2s %-30s %-4s %-120s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
+        print("%-2s %-30s %-4s %-120s" % ("3d", f"Hair color: {get_random_item(USA_colors)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
+        print("%-2s %-30s %-4s %-120s" % ("3f", f"Blood type: {get_random_item(blood_type)}", "3g", f"Religion: {get_random_item(religion)}")),
+        print("%-2s %-30s %-4s %-120s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(USA_foods)}")),
+        print("%-2s %-30s %-4s %-120s" % ("21c", f"Favorite color: {get_random_item(USA_colors)}", "21d", f"Favorite season: {get_random_item(USA_seasons)}")), 
+        print("%-2s %-30s %-4s %-120s" % ("21e", f"Favorite animal: {get_random_item(USA_animals)}", "21f", f"Lucky number: {random.randint(0, 99)}")),
         print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
     }
 
