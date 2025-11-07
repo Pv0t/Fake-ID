@@ -509,7 +509,6 @@ foods = [
 ]
 
 USA_political_side = [
-    # Major Active Political Parties
     "Democratic Party", "Republican Party", "Libertarian Party", "Green Party",
     "Constitution Party", "Working Families Party", "Socialist Party USA", "Peace and Freedom Party",
     "Reform Party", "Liberal", "Conservative", "Moderate",
