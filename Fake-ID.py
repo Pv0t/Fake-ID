@@ -547,11 +547,9 @@ blood_types = [
 
 def USA_locations_db(db):
     addresses = []
-    csv_files = []
-    for dirpath, _, filenames in os.walk(db):
-        for f in filenames:
-            if f.endswith(".csv"):
-                csv_files.append(os.path.join(dirpath, f))
+    csv_files = [os.path.join(dirpath, f)
+                for dirpath, _, filenames in os.walk(db)
+                for f in filenames if f.endswith(".csv")]
     csv_file = random.choice(csv_files)
     with open (csv_file, "r", encoding="utf-8") as f:
         for line in f:
@@ -572,54 +570,36 @@ def USA_locations_db(db):
                 "Postcode": postcode.strip()
             })
     base_address = random.choice(addresses)
-    street = base_address['Street']
-    city = base_address['City']
-    postcode = base_address['Postcode']
-    matching_addresses = [
-        addr for addr in addresses
-        if addr['Street'] == street and addr['City'] == city and addr['Postcode'] == postcode
-    ]
-    final_address = random.choice(matching_addresses)
-    return final_address
-db = "USA_locations_db"
-random_address = USA_locations_db(db)
+    matching_addresses = [addr for addr in addresses
+                          if addr['Street'] == base_address['Street']
+                          and addr['City'] == base_address['City'] 
+                          and addr['Postcode'] == base_address['Postcode']]
+    return random.choice(matching_addresses)
 
 def generate_random_birthday():
     today = datetime.today()
-    age_range_start = 18
-    age_range_end = 50
-    age = random.randint(age_range_start, age_range_end)
-    birth_year = today.year - age
+    age_range = random.randint(18, 50) 
+    birth_year = today.year - age_range
     random_month = random.randint(1, 12)
     days_in_month = [31, 29 if (birth_year % 4 == 0 and (birth_year % 100 != 0 or birth_year % 400 == 0)) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     random_day = random.randint(1, days_in_month[random_month - 1])
-    random_birthday = datetime(birth_year, random_month, random_day)
-    return random_birthday, age
-birthday, age = generate_random_birthday()
-
+    return datetime(birth_year, random_month, random_day), age_range
 
 def get_random_item(item_list):
     return random.choice(item_list)
 
 def get_two_random_item(item2_list, item3_list):
-    chosen_list = random.choice([item2_list, item3_list])
-    return random.choice(chosen_list)
+    return random.choice([random.choice(item2_list), random.choice(item3_list)])
 
 def id_issued():
     this_year = datetime.now().year
-    start_year = this_year - 4
-    end_year = this_year
-    issued_year = random.randint(start_year, end_year)
+    issued_year = random.randint(this_year - 4, this_year)
     issued_month_id = random.randint(1, 12)
     days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if issued_month_id == 2 and (issued_year % 4 == 0 and (issued_year % 100 != 0 or issued_year % 400 == 0)):
-        days_in_feb = 29
-    else:
-        days_in_feb = 28
-    days_in_month[1] = days_in_feb
+        days_in_month[1] = 29
     issued_day = random.randint(1, days_in_month[issued_month_id - 1])
     return issued_year, issued_month_id, issued_day
-year_id, month_id, day_id = id_issued()
 
 def generate_random_person():
     USA_first_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
@@ -630,31 +610,32 @@ def generate_random_person():
     USA_middle_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
     if USA_first_name == USA_middle_name:
         USA_middle_name == get_two_random_item(USA_first_names, USA_first_names_female)
+    
     USA_last_name = get_random_item(USA_last_names)
-    return {
-        print("IDENTIFICATION CARD".center(80, '-')),
-        print(""),
-        print("%-3s %-50s" % ("4d", f"LIC No. {random.randint(1000,9990)}-{random.randint(1000,9999)}-{random.randint(100,999)}{random.choice(string.ascii_letters)}")),
-        print("%-3s %-50s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})")),
-        print("%-3s %-50s %-4s %-90s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}")),
-        print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
-        print("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}")),
-        print("%-3s %-50s" % ("8", f"{random_address['HouseNumber']} {random_address['Street']}")),
-        print("%-3s %-50s" % (" ", f"{random_address['City']}, IL {random_address['Postcode']}")),
-        print(f" "),
-        print("%-3s %-50s %-4s %-90s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"')),
-        print("%-3s %-50s %-4s %-90s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}")),
-        print(" "),
-        print("MORE ABOUT YOU:".center(80, '-')),
-        print("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {random_address['City']}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
-        print("%-3s %-50s %-4s %-90s" % ("3d", f"Hair color: {get_random_item(hairs_color)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
-        print("%-3s %-50s %-4s %-90s" % ("3f", f"Blood type: {get_random_item(blood_types)}", "3g", f"Religion: {get_random_item(religions)}")),
-        print("%-3s %-50s %-4s %-90s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
-        print("%-3s %-50s %-4s %-90s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(foods)}")),
-        print("%-3s %-50s %-4s %-90s" % ("21c", f"Favorite color: {get_random_item(colors)}", "21d", f"Favorite season: {get_random_item(seasons)}")), 
-        print("%-3s %-50s %-4s %-90s" % ("21e", f"Favorite animal: {get_random_item(animals)}", "21f", f"Favorite number: {random.randint(0, 99)}")),
-        print(f"Social Security Number (SSN): {random.randint(100, 999)}-{random.randint(10, 99)}-{random.randint(1000,9999)}"),
-    }
+    birthday, age_range = generate_random_birthday()
+    year_id, month_id, day_id = id_issued()
+    random_address = USA_locations_db("USA_locations_db")
+    formatted_output = []
+    formatted_output.append("IDENTIFICATION CARD".center(80, '-'))
+    formatted_output.append("%-3s %-50s" % ("4d", f"LIC No. {random.randint(1000, 9999)}-{random.randint(1000, 9999)}-{random.randint(100, 999)}{random.choice(string.ascii_letters.upper())}"))
+    formatted_output.append("%-3s %-50s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age_range})"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}"))
+    formatted_output.append("%-3s %-50s" % ("1", f"Name: {USA_first_name}"))
+    formatted_output.append("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}"))
+    formatted_output.append("%-3s %-50s" % ("8", f"{random_address['HouseNumber']} {random_address['Street']}"))
+    formatted_output.append("%-3s %-50s" % (" ", f"{random_address['City']}, IL {random_address['Postcode']}"))
+    formatted_output.append(f" ")
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"'))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}"))
+    formatted_output.append("MORE ABOUT YOU:".center(80, '-'))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {random_address['City']}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("3d", f"Hair color: {get_random_item(hairs_color)}", "3e", f"Shoe size: {random.randint(5, 20)}"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("3f", f"Blood type: {get_random_item(blood_types)}", "3g", f"Religion: {get_random_item(religions)}"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("21a", f"Political side: {get_random_item(USA_political_side)}", "21b", f"Favorite food: {get_random_item(foods)}"))
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("21c", f"Favorite color: {get_random_item(colors)}", "21d", f"Favorite season: {get_random_item(seasons)}")) 
+    formatted_output.append("%-3s %-50s %-4s %-90s" % ("21e", f"Favorite animal: {get_random_item(animals)}", "21f", f"Favorite number: {random.randint(0, 99)}"))
+    return "\n".join(formatted_output)
 
 person = generate_random_person()
 print(person)
