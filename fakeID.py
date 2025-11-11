@@ -1,6 +1,7 @@
 import random
 from datetime import datetime, timedelta
 import string
+import csv
 
 USA_first_names_male = [
     "Liam", "Noah", "Oliver", "Theodore", "James", "Henry", "Mateo", "Elijah", 
@@ -543,6 +544,36 @@ blood_types = [
     "AB+", "AB-", "O+", "O-"
 ]
 
+def USA_locations_db():
+    addresses = []
+    with open (csv_file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.rsplit(' ', 3)
+            if len(parts) !=4:
+                continue
+            house_number, street, city, postcode = parts
+            address.append({
+                "HouseNumber": house_number,
+                "Street": street,
+                "City": city,
+                "Postcode": postcode
+            })
+    base_address = random.choice(addresses)
+    street = base_address['Street']
+    city = base_address['City']
+    postcode = base_address['Postcode']
+    matching_addresses = [
+        addr for addr in addresses
+        if addr['Street'] == street and addr['City'] == city and addr['Postcode'] == postcode
+    ]
+    final_address = random.choice(matching_addresses)
+    return final_address
+csv_path = "/USA_locations_db/Illinois/Chicago_address.csv"
+random_address = pick_random_address(csv_path)
+
 def generate_random_birthday():
     today = datetime.today()
     age_range_start = 18
@@ -598,8 +629,8 @@ def generate_random_person():
         print("%-3s %-50s %-4s %-90s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}")),
         print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
         print("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}")),
-        print("%-3s %-50s" % ("8", f"Address: ")),
-        print("%-3s %-50s" % (" ", f", , ZIP Code")),
+        print("%-3s %-50s" % ("8", f"{random_address['HouseNumber']} {random_address['Street']}")),
+        print("%-3s %-50s" % (" ", f"{random_address['City']}, {random_address['Postcode']}")),
         print(f" "),
         print("%-3s %-50s %-4s %-90s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"')),
         print("%-3s %-50s %-4s %-90s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}")),
