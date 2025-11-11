@@ -621,6 +621,9 @@ def generate_random_person():
         gender = 'M'
     else:
         gender = 'F'
+    USA_middle_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
+    if USA_first_name = USA_middle_name:
+        USA_middle_name == get_two_random_item(USA_first_names, USA_first_names_female)
     USA_last_name = get_random_item(USA_last_names)
     return {
         print("IDENTIFICATION CARD".center(80, '-')),
@@ -629,7 +632,7 @@ def generate_random_person():
         print("%-3s %-50s" % ("3", f"DoB: {birthday.strftime('%B %d, %Y')} (Age: {age})")),
         print("%-3s %-50s %-4s %-120s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}")),
         print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
-        print("%-3s %-50s" % ("2", f"Surname: {USA_last_name}")),
+        print("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}")),
         print("%-3s %-50s" % ("8", f"Address: still need to be programmed")),
         print("%-3s %-50s" % (" ", "City, State, ZIP Code")),
         print(f" "),
