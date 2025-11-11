@@ -2,6 +2,7 @@ import random
 from datetime import datetime, timedelta
 import string
 import csv
+import os
 
 USA_first_names_male = [
     "Liam", "Noah", "Oliver", "Theodore", "James", "Henry", "Mateo", "Elijah", 
@@ -544,22 +545,31 @@ blood_types = [
     "AB+", "AB-", "O+", "O-"
 ]
 
-def USA_locations_db():
+def USA_locations_db(db):
     addresses = []
-    with open (csv_file_path, "r", encoding="utf-8") as f:
+    csv_files = []
+    for dirpath, _, filenames in os.walk(db):
+        for f in filenames:
+            if f.endswith(".csv"):
+                csv_files.append(os.path.join(dirpath, f))
+    csv_file = random.choice(csv_files)
+    with open (csv_file, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if not line:
                 continue
-            parts = line.rsplit(' ', 3)
-            if len(parts) !=4:
+            parts = line.split()
+            if len(parts) < 4:
                 continue
-            house_number, street, city, postcode = parts
-            address.append({
+            house_number = parts[0]
+            postcode = parts[-1] if parts[-1].isdigit() else ""
+            street = " ".join(parts[1:-1]) if postcode else " ".join(parts[1:])
+            city = "Chicago"
+            addresses.append({
                 "HouseNumber": house_number,
                 "Street": street,
                 "City": city,
-                "Postcode": postcode
+                "Postcode": postcode.strip()
             })
     base_address = random.choice(addresses)
     street = base_address['Street']
@@ -571,8 +581,8 @@ def USA_locations_db():
     ]
     final_address = random.choice(matching_addresses)
     return final_address
-csv_path = "/USA_locations_db/Illinois/Chicago_address.csv"
-random_address = pick_random_address(csv_path)
+db = "USA_locations_db"
+random_address = USA_locations_db(db)
 
 def generate_random_birthday():
     today = datetime.today()
@@ -630,14 +640,13 @@ def generate_random_person():
         print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
         print("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}")),
         print("%-3s %-50s" % ("8", f"{random_address['HouseNumber']} {random_address['Street']}")),
-        print("%-3s %-50s" % (" ", f"{random_address['City']}, {random_address['Postcode']}")),
+        print("%-3s %-50s" % (" ", f"{random_address['City']}, IL {random_address['Postcode']}")),
         print(f" "),
         print("%-3s %-50s %-4s %-90s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"')),
         print("%-3s %-50s %-4s %-90s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}")),
         print(" "),
-        print(" "),
         print("MORE ABOUT YOU:".center(80, '-')),
-        print("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {random_location['city']}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
+        print("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {random_address['City']}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
         print("%-3s %-50s %-4s %-90s" % ("3d", f"Hair color: {get_random_item(hairs_color)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
         print("%-3s %-50s %-4s %-90s" % ("3f", f"Blood type: {get_random_item(blood_types)}", "3g", f"Religion: {get_random_item(religions)}")),
         print("%-3s %-50s %-4s %-90s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
