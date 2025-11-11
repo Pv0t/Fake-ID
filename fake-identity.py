@@ -622,7 +622,7 @@ def generate_random_person():
     else:
         gender = 'F'
     USA_middle_name = get_two_random_item(USA_first_names_male, USA_first_names_female)
-    if USA_first_name = USA_middle_name:
+    if USA_first_name == USA_middle_name:
         USA_middle_name == get_two_random_item(USA_first_names, USA_first_names_female)
     USA_last_name = get_random_item(USA_last_names)
     return {
