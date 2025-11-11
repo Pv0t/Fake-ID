@@ -538,44 +538,9 @@ hairs_color = [
     "Black", "Brown", "Auburn", "Red", "Blonde", "Gray", "White"
 ]
 
-USA_cities = [
-    "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
-    "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
-    "Austin", "Jacksonville", "Fort Worth", "Columbus", "Indianapolis",
-    "Charlotte", "San Francisco", "Seattle", "Denver", "Washington",
-    "Nashville", "Oklahoma City", "El Paso", "Boston", "Portland",
-    "Las Vegas", "Detroit", "Louisville", "Memphis", "Baltimore",
-    "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Mesa",
-    "Sacramento", "Atlanta", "Kansas City", "Colorado Springs", "Raleigh",
-    "Miami", "Omaha", "Long Beach", "Virginia Beach", "Oakland",
-    "Minneapolis", "Tampa", "Tulsa", "Arlington", "New Orleans",
-    "Wichita", "Bakersfield", "Cleveland", "Aurora", "Anaheim",
-    "Honolulu", "Santa Ana", "Riverside", "Corpus Christi", "Lexington",
-    "Stockton", "Henderson", "St. Paul", "Cincinnati", "Pittsburgh",
-    "Greensboro", "Anchorage", "Plano", "Lincoln", "Orlando",
-    "Irvine", "Newark", "Durham", "Chula Vista", "Toledo",
-    "Fort Wayne", "St. Petersburg", "Laredo", "Jersey City", "Madison",
-    "Chandler", "Lubbock", "Scottsdale", "Reno", "Buffalo",
-    "Gilbert", "Glendale", "North Las Vegas", "Winston-Salem", "Chesapeake",
-    "Norfolk", "Fremont", "Garland", "Irving", "Hialeah"
-]
-
 blood_types = [
     "A+", "A-", "B+", "B-",
     "AB+", "AB-", "O+", "O-"
-]
-
-USA_states = [
-    "Alabama", "Alaska", "Arizona", "Arkansas", "California",
-    "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
-    "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
-    "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
-    "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
-    "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
-    "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
-    "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
-    "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
-    "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ]
 
 def generate_random_birthday():
@@ -633,15 +598,15 @@ def generate_random_person():
         print("%-3s %-50s %-4s %-90s" % ("4b", f"EXP: {month_id}-{day_id}-{year_id + 5}", "4a", f"ISS: {month_id}-{day_id}-{year_id}")),
         print("%-3s %-50s" % ("1", f"Name: {USA_first_name}")),
         print("%-3s %-50s" % ("2", f"Middle Name & Surname: {USA_middle_name}, {USA_last_name}")),
-        print("%-3s %-50s" % ("8", f"Address: still need to be programmed")),
-        print("%-3s %-50s" % (" ", "City, State, ZIP Code")),
+        print("%-3s %-50s" % ("8", f"Address: ")),
+        print("%-3s %-50s" % (" ", f", , ZIP Code")),
         print(f" "),
         print("%-3s %-50s %-4s %-90s" % ("15", f"SEX: {gender}", "16", f'HGT: {random.randint(4, 6)}"-{random.randint(1, 10)}"')),
         print("%-3s %-50s %-4s %-90s" % ("17", f"WGT: {random.randint(132, 197)} lbs", "18", f"EYES: {get_random_item(eyes_color)}")),
         print(" "),
         print(" "),
         print("MORE ABOUT YOU:".center(80, '-')),
-        print("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {get_random_item(USA_cities)}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
+        print("%-3s %-50s %-4s %-90s" % ("3b", f"Birthplace: {random_location['city']}, USA", "3c", f"Zodiac Sign: {get_random_item(zodiac_sign)}")),
         print("%-3s %-50s %-4s %-90s" % ("3d", f"Hair color: {get_random_item(hairs_color)}", "3e", f"Shoe size: {random.randint(5, 20)}")),
         print("%-3s %-50s %-4s %-90s" % ("3f", f"Blood type: {get_random_item(blood_types)}", "3g", f"Religion: {get_random_item(religions)}")),
         print("%-3s %-50s %-4s %-90s" % ("20", f"E-mail: {USA_first_name.lower()}{USA_last_name.lower()}@{get_random_item(email_providers)}", "20a", f"Phone: ({random.randint(100,999)})-{random.randint(200,999)}-{random.randint(1000,9999)}")),
