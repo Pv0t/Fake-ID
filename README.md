@@ -11,7 +11,7 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 - **1000+ American names, middle names and last names**:  
   The script includes a curated list of over 1,000 male and female names with last names, sourced from reputable references for accuracy.
 - **Random date of birth (DOB)**:  
-  The script utilizes the datetime library to generate a random date of birth, including the month, day, and year. It also calculates the current age based on this date.
+  The script generate a random date of birth that are including the month, day, and year. It also calculates the current age.
 - **Random real address**:  
   The script generates random addresses, including street names, cities, and zip codes, using a dataset sourced from overpass.
 - **Random height and weight**:  
