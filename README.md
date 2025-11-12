@@ -9,14 +9,11 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 
 ## 1.2 Features Overview
 - **1000+ American names, middle names and last names**:  
-  The script includes a curated list of over 1,000 male and female names with last names, sourced from reputable references for accuracy.
-  <sub>**Source:** [1,000 boy names in the U.S](https://www.parents.com/top-1000-baby-boy-names-2757618), [1,000 girl names in the U.S](https://www.parents.com/top-1000-baby-girl-names-2757832), [1,000 most common surnames in the U.S](https://probablyhelpful.com/most_common_surnames.htm)</sub>
+  The script includes a curated list of over 1,000 male and female names with last names, sourced from reputable references for accuracy. <sub>**Source:** [1,000 boy names in the U.S](https://www.parents.com/top-1000-baby-boy-names-2757618), [1,000 girl names in the U.S](https://www.parents.com/top-1000-baby-girl-names-2757832), [1,000 most common surnames in the U.S](https://probablyhelpful.com/most_common_surnames.htm)</sub>
 - **Random date of birth (DOB)**:  
   The script generate a random date of birth that are including the month, day, and year. It also calculates the current age.
 - **Random real address**:  
-  The script generates random real addresses, including street names, cities, and zip codes. The dataset are retrieved using the api of [overpass](https://overpass-turbo.eu/).
-   
-  <sub>**Source:** [overpass turbo](https://overpass-turbo.eu/)</sub>
+  The script generates random real addresses, including street names, cities, and zip codes. The dataset are retrieved using the api of [overpass](https://overpass-turbo.eu/). <sub>**Source:** [overpass turbo](https://overpass-turbo.eu/)</sub>
   <details>
 
   <summary>The script supports only the following cities in the U.S:</summary>
