@@ -1,4 +1,5 @@
 # 1.0 Fake ID Generator
+## 1.1 Introduction
 This repository is designed to allow a python3 script to generate a randomized fake IDs, producing identification details that closely mimic real-world ID formats.
 The generated IDs are entirely fictitious and do not contain any real or personal information.
 This tool is invaluable for **developers**, **testers**, and **data scientists** who need realistic yet fake data for applications, testing environments, or simulations. It is particularly useful for generating mock data in situations where real user information is either unsuitable or unavailable, maintaining privacy and anonymity in the process.
@@ -6,7 +7,7 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 >[!IMPORTANT]
 > This script generates random first names, last names, addresses, and other personal details, based on common formats used in the United States.
 
-## 1.1 Feature Overview
+## 1.2 Feature Overview
 - **1000+ American names, middle names and last names**:  
   The script includes a curated list of over 1,000 male and female names with last names, sourced from reputable references for accuracy.
 - **Random date of birth (DOB)**:  
@@ -34,15 +35,17 @@ This tool is invaluable for **developers**, **testers**, and **data scientists**
 - **Random political side**:  
   The script generates a random political affiliation that is assigned to your fake identity.
   
-# 2.0 Usage
+# 2.0 I/O Interface
+## 2.1 Usage
 ```bash
 user@Fake-ID:~/Desktop$ git clone https://github.com/Pv0t/Fake-ID.git
 user@Fake-ID:~/Desktop$ cd Fake-ID
 user@Fake-ID:~/Desktop/Fake-ID$ python3 fakeID.py
 ```
 
-## 2.1 Output
+## 2.2 Output
 
+![fakeID](https://github.com/user-attachments/assets/f84e9ff0-6161-4737-98f8-484dfb914269)
 
 ----
 >[!WARNING]
